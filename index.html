@@ -1,16 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Social Sim Demo</title>
-    <link rel="stylesheet" href="./style.css" />
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="./script.js" defer></script>
-  </head>
-  <body>
-    <h1>Social Sim Demo with Supabase</h1>
-    <button id="loadDataBtn">Load Data</button>
-    <pre id="output"></pre>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reddit Social Simulation</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <input type="text" id="subredditInput" placeholder="Enter subreddit (e.g. r/society_sim)"/>
+  </header>
+
+  <main>
+    <section class="submission-form">
+      <h2 id="subredditDisplay">r/society_sim</h2>
+      <input type="text" id="title" placeholder="Post Title" />
+      <textarea id="content" rows="5" placeholder="Your post content..."></textarea>
+
+      <div class="meta-row">
+        <input type="text" id="submissionFlair" placeholder="Submission Flair" />
+        <input type="text" id="usernameFlair" placeholder="Username Flair" />
+        <label><input type="checkbox" id="isNSFW" /> 18+ NSFW</label>
+      </div>
+
+      <button onclick="submitPost()">Submit</button>
+    </section>
+
+    <section class="load-section">
+      <button id="loadDataBtn">載入資料</button>
+      <pre id="output"></pre>
+    </section>
+
+    <section id="simulationResult" class="simulation-output">
+      <!-- 模擬結果會出現在這裡 -->
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
 </html>
