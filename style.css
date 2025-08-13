@@ -11,10 +11,40 @@ header {
   text-align: center;
 }
 
-header input {
+/* Style the new container for the prefix and input */
+.subreddit-input-group {
+  display: flex; /* Aligns the prefix and input side-by-side */
   width: 60%;
+  margin: 0 auto; /* Center the element */
   padding: 0.5em;
+  background: white;
+  border-radius: 4px;
+  border: 1px solid #ccc; /* Apply the border to the group, not the input */
+}
+
+/* Style the "r/" prefix */
+.subreddit-prefix {
+  display: flex;
+  align-items: center;
+  padding: 0 0.5em; /* Add some padding around the text */
+  color: #555; /* A slightly lighter color for the prefix */
   font-size: 1em;
+  font-weight: bold;
+}
+
+/* Style the input field inside the group */
+.subreddit-input-group input {
+  flex: 1; /* Makes the input take up the remaining space */
+  border: none; /* Remove the individual border */
+  outline: none; /* Remove the outline on focus */
+  padding: 0; /* Adjust padding to match the group's padding */
+  font-size: 1em;
+}
+
+/* Add a hover/focus effect to the entire group */
+.subreddit-input-group:focus-within {
+  box-shadow: 0 0 0 2px rgba(0, 121, 211, 0.5);
+  border-color: #0079d3;
 }
 
 main {

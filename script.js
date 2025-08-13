@@ -6,7 +6,7 @@ const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBh
 const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
 
 async function submitPost() {
-  const subreddit = document.getElementById("subredditInput").value || "r/society_sim"
+  const subreddit = "r/" + (document.getElementById("subredditInput").value || "society_sim")
   const title = document.getElementById("title").value
   const content = document.getElementById("content").value
   const submissionFlair = document.getElementById("submissionFlair").value
@@ -14,7 +14,7 @@ async function submitPost() {
   const isNSFW = document.getElementById("isNSFW").checked
 
   // 顯示 subreddit
-  document.getElementById("subredditDisplay").innerText = subreddit
+  document.getElementById("subredditDisplay").innerText = "r/" + (document.getElementById("subredditInput").value || "society_sim")
 
   // 模擬 LLM 回應
   const simulatedScore = Math.floor(Math.random() * 200) - 100
@@ -83,3 +83,8 @@ async function loadData() {
 
 // Event listener
 loadDataBtn.addEventListener('click', loadData)
+
+document.getElementById("subredditInput").addEventListener("input", function(e) {
+  const value = "r/" + (e.target.value || "society_sim")
+  document.getElementById("subredditDisplay").innerText = "r/" + (e.target.value || "society_sim")
+})
