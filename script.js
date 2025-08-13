@@ -19,18 +19,14 @@ async function submitPost() {
   const simulatedScore = Math.floor(Math.random() * 200) - 100;
   const comments = [
     "Wow, really interesting take!",
-    "Not sure I agree, but I get your point.",
-    "This belongs in r/unpopularopinion.",
-    "Red flag post... 🤨",
-    "Can we get a source on that?",
+    "I'm not sure I agree with this, but it's a good post.",
+    "This is exactly what I needed to read today."
   ];
 
-  const output = document.getElementById("output");
-  output.innerHTML = `
+  document.getElementById("simulationResult").innerHTML = `
     <div class="post-preview">
       <h3>${title}</h3>
-      <p>${content}</p>
-      <p><strong>${submissionFlair}</strong> | <em>${usernameFlair}</em> ${isNSFW ? "| 🔞 NSFW" : ""}</p>
+      <p><em>Posted by u/username ${usernameFlair ? `| ${usernameFlair}` : ""} | ${submissionFlair ? `| ${submissionFlair}` : ""}</em> ${isNSFW ? "| 🔞 NSFW" : ""}</p>
       <p>LLM 模擬分數：👍 ${Math.max(0, simulatedScore)} 👎 ${Math.max(0, -simulatedScore)}</p>
       <hr/>
       <h4>討論串</h4>
@@ -63,34 +59,15 @@ async function submitPost() {
 document.addEventListener('DOMContentLoaded', () => {
   const loadDataBtn = document.getElementById('loadDataBtn');
   const output = document.getElementById('output');
-  const titleInput = document.getElementById('title');
-  const contentInput = document.getElementById('content');
-  const subredditInput = document.getElementById('subredditInput');
-  const titleCounter = document.getElementById('title-counter');
-  const contentCounter = document.getElementById('content-counter');
-  const submitBtn = document.querySelector('button[onclick="submitPost()"]');
-
-  // Dark Mode Toggle
+  const subredditInput = document.getElementById("subredditInput");
+  const titleInput = document.getElementById("title");
+  const contentInput = document.getElementById("content");
+  const submitBtn = document.getElementById("submitBtn");
+  const titleCounter = document.getElementById("title-counter");
+  const contentCounter = document.getElementById("content-counter");
   const darkModeToggle = document.getElementById('darkModeToggle');
-  const body = document.body;
 
-  // Check for saved user preference in localStorage
-  if (localStorage.getItem('darkMode') === 'enabled') {
-    body.classList.add('dark-mode');
-    darkModeToggle.checked = true;
-  }
-
-  // Event listener for the dark mode toggle
-  darkModeToggle.addEventListener('change', () => {
-    if (darkModeToggle.checked) {
-      body.classList.add('dark-mode');
-      localStorage.setItem('darkMode', 'enabled');
-    } else {
-      body.classList.remove('dark-mode');
-      localStorage.setItem('darkMode', 'disabled');
-    }
-  });
-
+  // Function to update character counters
   function updateCounter(inputElement, counterElement, maxLength) {
     const currentLength = inputElement.value.length;
     counterElement.textContent = `${currentLength}/${maxLength}`;
@@ -112,12 +89,11 @@ document.addEventListener('DOMContentLoaded', () => {
                       titleInput.value.trim() !== '' &&
                       contentInput.value.trim() !== '';
     submitBtn.disabled = !allFilled;
-    submitBtn.style.backgroundColor = allFilled ? '#0079d3' : 'lightgray';
-    submitBtn.style.cursor = allFilled ? 'pointer' : 'not-allowed';
   }
 
   // Event listeners
   loadDataBtn.addEventListener('click', loadData);
+  submitBtn.addEventListener('click', submitPost);
 
   subredditInput.addEventListener("input", (e) => {
     document.getElementById("subredditDisplay").innerText = "r/" + (e.target.value || "society_sim");
@@ -138,4 +114,9 @@ document.addEventListener('DOMContentLoaded', () => {
   updateCounter(titleInput, titleCounter, 100);
   updateCounter(contentInput, contentCounter, 10000);
   validateForm();
+
+  // Dark mode toggle functionality
+  darkModeToggle.addEventListener('change', () => {
+    document.body.classList.toggle('dark-mode', darkModeToggle.checked);
+  });
 });

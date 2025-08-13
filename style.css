@@ -56,12 +56,22 @@ body.dark-mode textarea::placeholder {
   color: #a0b0c0;
 }
 
-body.dark-mode button {
-  background-color: #2a415a; /* Navy button color */
+body.dark-mode #submitBtn,
+body.dark-mode #loadDataBtn {
+  background-color: #2a415a;
+  color: white;
 }
 
-body.dark-mode button:hover {
-  background-color: #3c5d7a; /* Lighter navy on hover */
+body.dark-mode #submitBtn:hover:not(:disabled),
+body.dark-mode #loadDataBtn:hover:not(:disabled) {
+  background-color: #3c5d7a;
+}
+
+body.dark-mode #submitBtn:disabled,
+body.dark-mode #loadDataBtn:disabled {
+  background-color: #20354e;
+  color: #a0b0c0;
+  cursor: not-allowed;
 }
 
 body.dark-mode .simulation-output {
@@ -309,7 +319,8 @@ textarea::placeholder {
   padding: 0.8em;
 }
 
-button {
+#submitBtn,
+#loadDataBtn {
   margin-top: 1.5em;
   padding: 0.8em 1.5em;
   background-color: #0079d3;
@@ -321,13 +332,15 @@ button {
   transition: background-color 0.2s ease;
 }
 
-button:disabled {
-  background-color: lightgray;
-  cursor: not-allowed;
+#submitBtn:hover:not(:disabled),
+#loadDataBtn:hover:not(:disabled) {
+  background-color: #005a96;
 }
 
-button:hover {
-  background-color: #005a96;
+#submitBtn:disabled,
+#loadDataBtn:disabled {
+  background-color: lightgray;
+  cursor: not-allowed;
 }
 
 .simulation-output {
