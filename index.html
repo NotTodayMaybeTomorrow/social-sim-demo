@@ -19,15 +19,22 @@
 
   <main>
     <section class="submission-form">
-      <!-- <h2 id="subredditDisplay">r/society_sim</h2> -->
-      <div class="input-with-asterisk-container">
-        <input type="text" id="title" placeholder="Post Title" required/>
-        <span class="required-asterisk">*</span>
+      <h2 id="subredditDisplay">r/society_sim</h2>
+      
+      <div class="submission-field-group">
+        <div class="input-with-asterisk-container">
+          <input type="text" id="title" placeholder="Post Title" required maxlength="100"/>
+          <span class="required-asterisk">*</span>
+        </div>
+        <span id="title-counter" class="char-counter">0/100</span>
       </div>
       
-      <div class="input-with-asterisk-container">
-        <textarea id="content" rows="5" placeholder="Your post content..." required></textarea>
-        <span class="required-asterisk">*</span>
+      <div class="submission-field-group">
+        <div class="input-with-asterisk-container">
+          <textarea id="content" rows="5" placeholder="Your post content..." required maxlength="10000"></textarea>
+          <span class="required-asterisk">*</span>
+        </div>
+        <span id="content-counter" class="char-counter">0/10000</span>
       </div>
 
       <div class="meta-row">
