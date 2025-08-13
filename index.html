@@ -10,15 +10,23 @@
   <header>
     <div class="subreddit-input-group">
       <span class="subreddit-prefix">r/</span>
-      <input type="text" id="subredditInput" placeholder="society_sim *" required/>
+      <input type="text" id="subredditInput" placeholder="society_sim" required/>
+      <span class="required-asterisk">*</span>
     </div>
   </header>
 
   <main>
     <section class="submission-form">
-      <h2 id="subredditDisplay">r/society_sim</h2>
-      <input type="text" id="title" placeholder="Post Title *" required/>
-      <textarea id="content" rows="5" placeholder="Your post content... *" required></textarea>
+      <div class="input-with-asterisk-container">
+        <input type="text" id="title" placeholder="Post Title" required/>
+        <span class="required-asterisk">*</span>
+      </div>
+      
+      <div class="input-with-asterisk-container">
+        <textarea id="content" rows="5" placeholder="Your post content..." required></textarea>
+        <span class="required-asterisk">*</span>
+      </div>
+
 
       <div class="meta-row">
         <input type="text" id="submissionFlair" placeholder="Submission Flair" />
