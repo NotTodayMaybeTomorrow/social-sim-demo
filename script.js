@@ -62,29 +62,50 @@ const output = document.getElementById("output")
   }
 }
 
-// Elements
-const loadDataBtn = document.getElementById('loadDataBtn')
-const output = document.getElementById('output')
+// Ensure the DOM is fully loaded before running the script
+document.addEventListener('DOMContentLoaded', (event) => {
+  // Elements
+  const loadDataBtn = document.getElementById('loadDataBtn')
+  const output = document.getElementById('output')
+  const titleInput = document.getElementById('title');
+  const contentInput = document.getElementById('content');
+  const titleCounter = document.getElementById('title-counter');
+  const contentCounter = document.getElementById('content-counter');
 
-// Fetch data function
-async function loadData() {
-  output.textContent = 'Loading...'
-
-  const { data, error } = await supabase
-    .from('test_table')      // <-- change this to your table name
-    .select('*')
-
-  if (error) {
-    output.textContent = 'Error: ' + error.message
-  } else {
-    output.textContent = JSON.stringify(data, null, 2)
+  // Function to update the character counter
+  function updateCounter(inputElement, counterElement, maxLength) {
+    const currentLength = inputElement.value.length;
+    counterElement.textContent = `${currentLength}/${maxLength}`;
   }
-}
 
-// Event listener
-loadDataBtn.addEventListener('click', loadData)
+  // Fetch data function
+  async function loadData() {
+    output.textContent = 'Loading...'
 
-document.getElementById("subredditInput").addEventListener("input", function(e) {
-  const value = "r/" + (e.target.value || "society_sim")
-  document.getElementById("subredditDisplay").innerText = "r/" + (e.target.value || "society_sim")
-})
+    const { data, error } = await supabase
+      .from('test_table')      // <-- change this to your table name
+      .select('*')
+
+    if (error) {
+      output.textContent = 'Error: ' + error.message
+    } else {
+      output.textContent = JSON.stringify(data, null, 2)
+    }
+  }
+
+  // Event listeners
+  loadDataBtn.addEventListener('click', loadData)
+
+  document.getElementById("subredditInput").addEventListener("input", function(e) {
+    const value = "r/" + (e.target.value || "society_sim")
+    document.getElementById("subredditDisplay").innerText = "r/" + (e.target.value || "society_sim")
+  })
+
+  // Add event listeners for character counters
+  titleInput.addEventListener('input', () => updateCounter(titleInput, titleCounter, 100));
+  contentInput.addEventListener('input', () => updateCounter(contentInput, contentCounter, 10000));
+
+  // Initialize counters on page load
+  updateCounter(titleInput, titleCounter, 100);
+  updateCounter(contentInput, contentCounter, 10000);
+});
