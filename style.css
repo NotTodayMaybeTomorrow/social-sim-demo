@@ -148,6 +148,11 @@ button {
   transition: background-color 0.2s ease;
 }
 
+button:disabled {
+  background-color: lightgray;
+  cursor: not-allowed;
+}
+
 button:hover {
   background-color: #005a96;
 }
