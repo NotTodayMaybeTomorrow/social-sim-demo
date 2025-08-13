@@ -7,8 +7,15 @@ body {
 
 header {
   background: #ff4500;
-  padding: 1em;
+  padding: 1.5em 1em; /* Increased vertical padding for more space */
   text-align: center;
+}
+
+header h1 {
+  color: white;
+  margin: 0 0 1em 0; /* Add bottom margin to separate from the input */
+  font-size: 1.8em;
+  font-weight: bold;
 }
 
 /* Style the new container for the prefix and input */
@@ -62,6 +69,12 @@ main {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+.submission-form h2 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 1em;
+}
+
 /* New CSS to handle the containers for the title and content inputs */
 .input-with-asterisk-container {
   display: flex;
@@ -107,6 +120,7 @@ main {
 
 .meta-row input {
   flex: 1;
+  padding: 0.8em;
 }
 
 button {
@@ -118,6 +132,11 @@ button {
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  transition: background-color 0.2s ease; /* Add a smooth transition for hover effect */
+}
+
+button:hover {
+  background-color: #005a96; /* Darker blue on hover */
 }
 
 .simulation-output {

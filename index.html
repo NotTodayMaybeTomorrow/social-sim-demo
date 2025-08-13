@@ -5,9 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Reddit Social Simulation</title>
   <link rel="stylesheet" href="style.css"/>
+  <link rel="icon" type="image/png" href="tab_web_icon.jpeg">
 </head>
 <body>
   <header>
+    <h1>Reddit Social Simulation</h1>
     <div class="subreddit-input-group">
       <span class="subreddit-prefix">r/</span>
       <input type="text" id="subredditInput" placeholder="society_sim" required/>
@@ -17,6 +19,7 @@
 
   <main>
     <section class="submission-form">
+      <!-- <h2 id="subredditDisplay">r/society_sim</h2> -->
       <div class="input-with-asterisk-container">
         <input type="text" id="title" placeholder="Post Title" required/>
         <span class="required-asterisk">*</span>
@@ -26,7 +29,6 @@
         <textarea id="content" rows="5" placeholder="Your post content..." required></textarea>
         <span class="required-asterisk">*</span>
       </div>
-
 
       <div class="meta-row">
         <input type="text" id="submissionFlair" placeholder="Submission Flair" />
@@ -43,8 +45,7 @@
     </section>
 
     <section id="simulationResult" class="simulation-output">
-      <!-- 模擬結果會出現在這裡 -->
-    </section>
+      </section>
   </main>
 
   <script src="script.js"></script>
