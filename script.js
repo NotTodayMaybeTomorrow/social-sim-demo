@@ -70,6 +70,27 @@ document.addEventListener('DOMContentLoaded', () => {
   const contentCounter = document.getElementById('content-counter');
   const submitBtn = document.querySelector('button[onclick="submitPost()"]');
 
+  // Dark Mode Toggle
+  const darkModeToggle = document.getElementById('darkModeToggle');
+  const body = document.body;
+
+  // Check for saved user preference in localStorage
+  if (localStorage.getItem('darkMode') === 'enabled') {
+    body.classList.add('dark-mode');
+    darkModeToggle.checked = true;
+  }
+
+  // Event listener for the dark mode toggle
+  darkModeToggle.addEventListener('change', () => {
+    if (darkModeToggle.checked) {
+      body.classList.add('dark-mode');
+      localStorage.setItem('darkMode', 'enabled');
+    } else {
+      body.classList.remove('dark-mode');
+      localStorage.setItem('darkMode', 'disabled');
+    }
+  });
+
   function updateCounter(inputElement, counterElement, maxLength) {
     const currentLength = inputElement.value.length;
     counterElement.textContent = `${currentLength}/${maxLength}`;

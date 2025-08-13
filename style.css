@@ -3,19 +3,185 @@ body {
   background: #f6f7f8;
   margin: 0;
   padding: 0;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #0d1a29; /* Darker saturated navy */
+  color: #e0e8f0; /* Lighter blue-gray text */
+}
+
+body.dark-mode header {
+  background: #152a44; /* Slightly lighter navy for header */
+}
+
+body.dark-mode header h1 {
+  color: #e0e8f0;
+}
+
+body.dark-mode .subreddit-input-group {
+  background: #132236; /* Darker navy for input container */
+  border-color: #334d66; /* Matching blue-gray border */
+}
+
+body.dark-mode .subreddit-input-group input {
+  background: #132236;
+  color: #e0e8f0;
+}
+
+body.dark-mode .subreddit-prefix {
+  color: white;
+}
+
+body.dark-mode .submission-form {
+  background: #0d1a29;
+  box-shadow: 0 2px 4px rgba(255,255,255,0.1);
+}
+
+body.dark-mode .submission-form h2 {
+  color: #e0e8f0;
+}
+
+body.dark-mode .submission-form input,
+body.dark-mode .submission-form textarea {
+  background: #132236;
+  border-color: #334d66;
+  color: #e0e8f0;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+  color: #a0b0c0;
+}
+
+body.dark-mode button {
+  background-color: #2a415a; /* Navy button color */
+}
+
+body.dark-mode button:hover {
+  background-color: #3c5d7a; /* Lighter navy on hover */
+}
+
+body.dark-mode .simulation-output {
+  background: #0d1a29;
+  box-shadow: 0 2px 4px rgba(255,255,255,0.1);
 }
 
 header {
   background: #ff4500;
   padding: 1.5em 1em;
   text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 header h1 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2.2em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+  margin: 0 0 0.4em 0;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+  padding: 0.3em 0;
+}
+
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+  position: absolute;
+  top: 1.5em;
+  right: 1.5em;
+}
+
+/* Smaller Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px; /* Smaller width */
+  height: 24px; /* Smaller height */
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  overflow: hidden; /* Hide symbols that are out of bounds */
+}
+
+/* Day Mode Symbols (Sun) */
+.slider:before {
+  position: absolute;
+  content: "☀︎";
+  font-size: 1.2em;
+  color: #ffcc00;
+  height: 18px; 
+  width: 18px; 
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-transition: .4s;
+  transition: .4s;
+  z-index: 2;
+}
+
+/* Night Mode Symbols (Moon) */
+.slider:after {
+  content: "☾";
+  font-size: 1.2em;
   color: white;
-  margin: 0 0 1em 0;
-  font-size: 1.8em;
-  font-weight: bold;
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.4s ease;
+  z-index: 1;
+}
+
+/* When checked (dark mode) */
+input:checked + .slider {
+  background-color: #2a415a; /* Night sky color */
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
+  content: "☾"; /* Change content to moon */
+  color: white;
+  background-color: transparent;
+}
+
+input:checked + .slider:after {
+  opacity: 1; /* Show moon symbol */
+}
+
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+.slider.round {
+  border-radius: 24px;
 }
 
 /* Style the new container for the prefix and input */
@@ -87,6 +253,13 @@ main {
   display: flex;
   align-items: flex-start;
   gap: 0.5em;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+  color: #888;
 }
 
 /* Style for the red asterisk */
