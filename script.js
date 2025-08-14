@@ -14,30 +14,38 @@ async function submitPost() {
   const usernameFlair = document.getElementById("usernameFlair").value;
   const isNSFW = document.getElementById("isNSFW").checked;
 
-  document.getElementById("subredditDisplay").innerText = subreddit;
+  // Update post content on the page
+  document.getElementById("displayTitle").innerText = title;
+  
+  // Construct the meta string
+  const metaText = `Posted by u/username ${usernameFlair ? `| ${usernameFlair}` : ""} ${submissionFlair ? `| ${submissionFlair}` : ""} ${isNSFW ? "| 🔞 NSFW" : ""}`;
+  document.getElementById("displayMeta").innerHTML = `<em>${metaText}</em>`;
 
-  const simulatedScore = Math.floor(Math.random() * 200) - 100;
+  document.getElementById("displayContent").innerText = content;
+  
+  // The comments section is added here after submission
+  const commentsHeader = document.getElementById("commentsHeader");
+  const commentsList = document.getElementById("commentsList");
+
+  commentsHeader.innerText = "Comments";
+  
   const comments = [
     "Wow, really interesting take!",
     "I'm not sure I agree with this, but it's a good post.",
     "This is exactly what I needed to read today."
   ];
 
-  document.getElementById("simulationResult").innerHTML = `
-    <div class="post-preview">
-      <h3>${title}</h3>
-      <p><em>Posted by u/username ${usernameFlair ? `| ${usernameFlair}` : ""} | ${submissionFlair ? `| ${submissionFlair}` : ""}</em> ${isNSFW ? "| 🔞 NSFW" : ""}</p>
-      <p>LLM 模擬分數：👍 ${Math.max(0, simulatedScore)} 👎 ${Math.max(0, -simulatedScore)}</p>
-      <hr/>
-      <h4>討論串</h4>
-      <ul>
-        ${comments.slice(0, 3).map(c => `<li>${c}</li>`).join("")}
-      </ul>
-    </div>
-  `;
+  // Clear previous comments and add new ones
+  commentsList.innerHTML = comments.slice(0, 3).map(c => `<li>${c}</li>`).join("");
+
+  // The score will be updated after the "simulation"
+  const simulatedScore = Math.floor(Math.random() * 200) - 100;
+  
+  // Update the score on the page
+  document.getElementById("displayScore").innerText = simulatedScore;
 
   const { data, error } = await supabaseClient
-    .from('test_table')
+    .from('submissions')
     .insert([{
       subreddit,
       title,
@@ -96,7 +104,6 @@ document.addEventListener('DOMContentLoaded', () => {
   submitBtn.addEventListener('click', submitPost);
 
   subredditInput.addEventListener("input", (e) => {
-    document.getElementById("subredditDisplay").innerText = "r/" + (e.target.value || "society_sim");
     validateForm();
   });
 

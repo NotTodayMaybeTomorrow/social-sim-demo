@@ -351,7 +351,51 @@ textarea::placeholder {
 }
 
 .post-preview {
+  display: flex;
+  align-items: flex-start; /* Aligns items to the top */
   margin-top: 1em;
   padding: 1em;
   border-top: 1px solid #ddd;
+}
+
+.score-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px; /* Spacing between the buttons and score */
+  width: auto;
+  text-align: center;
+  margin-right: 15px;
+}
+
+.score-container .score {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--text-color, #333);
+  margin: 0;
+}
+
+.upvote-btn,
+.downvote-btn {
+  cursor: pointer;
+  padding: 5px;
+  transition: color 0.2s ease-in-out;
+}
+
+/* Hover and active states for upvote and downvote */
+.upvote-btn:hover {
+  color: #ff4500; /* Reddit orange */
+}
+
+.downvote-btn:hover {
+  color: #7193ff; /* Reddit blue */
+}
+
+/* Optional: Active state when clicked */
+.upvote-btn:active {
+  color: #ff4500;
+}
+
+.downvote-btn:active {
+  color: #7193ff;
 }
