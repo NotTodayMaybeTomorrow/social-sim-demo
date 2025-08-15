@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   async function loadData() {
     output.textContent = 'Loading...';
-    const { data, error } = await supabaseClient.from('test_table').select('*');
+    const { data, error } = await supabaseClient.from('submissions').select('*');
     if (error) {
       output.textContent = 'Error: ' + error.message;
     } else {
