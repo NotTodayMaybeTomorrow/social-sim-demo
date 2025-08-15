@@ -17,8 +17,30 @@ async function submitPost() {
   // Update post content on the page
   document.getElementById("displayTitle").innerText = title;
   
-  // Construct the meta string
-  const metaText = `Posted by u/username ${usernameFlair ? `| ${usernameFlair}` : ""} ${submissionFlair ? `| ${submissionFlair}` : ""} ${isNSFW ? "| 🔞 NSFW" : ""}`;
+  // Construct the meta string with styled flairs and new line layout
+  let metaText = '<div class="post-meta">';
+  
+  // First line: Posted by with username flair
+  metaText += '<span class="post-meta-line">Posted by u/username';
+  if (usernameFlair) {
+    metaText += ` <span class="username-flair">${usernameFlair}</span>`;
+  }
+  metaText += '</span>';
+  
+  // Second line: Submission flair and NSFW tag (if present)
+  if (submissionFlair || isNSFW) {
+    metaText += '<span class="post-meta-line">';
+    if (submissionFlair) {
+      metaText += `<span class="submission-flair">${submissionFlair}</span>`;
+    }
+    if (isNSFW) {
+      metaText += '<span class="nsfw-tag">🔞 NSFW</span>';
+    }
+    metaText += '</span>';
+  }
+  
+  metaText += '</div>';
+
   document.getElementById("displayMeta").innerHTML = `<em>${metaText}</em>`;
 
   document.getElementById("displayContent").innerText = content;
