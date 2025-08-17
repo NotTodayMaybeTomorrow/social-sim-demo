@@ -156,7 +156,7 @@ header h1 {
 
 /* Night Mode Symbols (Moon) */
 .slider:after {
-  content: "☾";
+  content: " ";
   font-size: 1.2em;
   color: white;
   position: absolute;
