@@ -74,7 +74,7 @@ async function submitPost() {
       content,
       submission_flair:submissionFlair || null,
       username_flair:usernameFlair || null,
-      is_NSFW: !!isNSFW,
+      is_nsfw: !!isNSFW,
       created_at: new Date().toISOString()
     }])
     .select();
