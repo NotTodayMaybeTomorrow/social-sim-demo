@@ -10,9 +10,9 @@ async function submitPost() {
   const subreddit = "r/" + (document.getElementById("subredditInput").value || "society_sim");
   const title = document.getElementById("title").value;
   const content = document.getElementById("content").value;
-  const submissionFlair = document.getElementById("submissionFlair").value;
-  const usernameFlair = document.getElementById("usernameFlair").value;
-  const isNSFW = document.getElementById("isNSFW").checked;
+  const submission_flair = document.getElementById("submission_flair").value;
+  const username_flair = document.getElementById("username_flair").value;
+  const is_NSFW = document.getElementById("is_NSFW").checked;
 
   // Update post content on the page
   document.getElementById("displayTitle").innerText = title;
@@ -22,18 +22,18 @@ async function submitPost() {
   
   // First line: Posted by with username flair
   metaText += '<span class="post-meta-line">Posted by u/username';
-  if (usernameFlair) {
-    metaText += ` <span class="username-flair">${usernameFlair}</span>`;
+  if (username_flair) {
+    metaText += ` <span class="username-flair">${username_flair}</span>`;
   }
   metaText += '</span>';
   
   // Second line: Submission flair and NSFW tag (if present)
-  if (submissionFlair || isNSFW) {
+  if (submission_flair || is_NSFW) {
     metaText += '<span class="post-meta-line">';
-    if (submissionFlair) {
-      metaText += `<span class="submission-flair">${submissionFlair}</span>`;
+    if (submission_flair) {
+      metaText += `<span class="submission-flair">${submission_flair}</span>`;
     }
-    if (isNSFW) {
+    if (is_NSFW) {
       metaText += '<span class="nsfw-tag">🔞 NSFW</span>';
     }
     metaText += '</span>';
@@ -72,12 +72,12 @@ async function submitPost() {
       subreddit,
       title,
       content,
-      submissionFlair,
-      usernameFlair,
-      isNSFW,
-      simulatedScore,
+      submission_flair,
+      username_flair,
+      is_NSFW,
       created_at: new Date().toISOString()
-    }]);
+    }])
+    .select();
 
   if (error) {
     console.error("上傳到 Supabase 失敗：", error.message);
