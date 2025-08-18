@@ -3,16 +3,16 @@ const SUPABASE_URL = 'https://wfwrdegsjjqlxskvnlgb.supabase.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Indmd3JkZWdzampxbHhza3ZubGdiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQ5Nzg0NzIsImV4cCI6MjA3MDU1NDQ3Mn0.30ABDqOfCH9KnITUVjkT75XULgDFpaSyOo_tNi-Mxzk';
 
 // Initialize Supabase client
-const { createClient } = supabase;
+import { createClient } from 'https://esm.sh/@supabase/supabase-js';
 const supabaseClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 async function submitPost() {
   const subreddit = "r/" + (document.getElementById("subredditInput").value || "society_sim");
   const title = document.getElementById("title").value;
   const content = document.getElementById("content").value;
-  const submission_flair = document.getElementById("submission_flair").value;
-  const username_flair = document.getElementById("username_flair").value;
-  const is_NSFW = document.getElementById("is_NSFW").checked;
+  const submissionFlair = document.getElementById("submissionFlair").value;
+  const usernameFlair = document.getElementById("usernameFlair").value;
+  const isNSFW = document.getElementById("isNSFW").checked;
 
   // Update post content on the page
   document.getElementById("displayTitle").innerText = title;
@@ -22,18 +22,18 @@ async function submitPost() {
   
   // First line: Posted by with username flair
   metaText += '<span class="post-meta-line">Posted by u/username';
-  if (username_flair) {
-    metaText += ` <span class="username-flair">${username_flair}</span>`;
+  if (usernameFlair) {
+    metaText += ` <span class="username-flair">${usernameFlair}</span>`;
   }
   metaText += '</span>';
   
   // Second line: Submission flair and NSFW tag (if present)
-  if (submission_flair || is_NSFW) {
+  if (submissionFlair || isNSFW) {
     metaText += '<span class="post-meta-line">';
-    if (submission_flair) {
-      metaText += `<span class="submission-flair">${submission_flair}</span>`;
+    if (submissionFlair) {
+      metaText += `<span class="submission-flair">${submissionFlair}</span>`;
     }
-    if (is_NSFW) {
+    if (isNSFW) {
       metaText += '<span class="nsfw-tag">🔞 NSFW</span>';
     }
     metaText += '</span>';
@@ -72,9 +72,9 @@ async function submitPost() {
       subreddit,
       title,
       content,
-      submission_flair,
-      username_flair,
-      is_NSFW,
+      submission_flair:submissionFlair || null,
+      username_flair:usernameFlair || null,
+      is_NSFW: !!isNSFW,
       created_at: new Date().toISOString()
     }])
     .select();
