@@ -13,7 +13,7 @@ async function submitPost() {
   const submissionFlair = document.getElementById("submissionFlair").value;
   const usernameFlair = document.getElementById("usernameFlair").value;
   const isNSFW = document.getElementById("isNSFW").checked;
-  console.log("test")
+  alert("test");
 
   // Update post content on the page
   document.getElementById("displayTitle").innerText = title;
