@@ -80,10 +80,11 @@ async function submitPost() {
     .select();
 
   if (error) {
-    console.error("上傳到 Supabase 失敗：", error.message);
+    console.error("Insert failed:", error);
   } else {
-    console.log("貼文已成功儲存到 Supabase", data);
+    console.log("Insert succeeded:", data);
   }
+
 }
 
 document.addEventListener('DOMContentLoaded', () => {
