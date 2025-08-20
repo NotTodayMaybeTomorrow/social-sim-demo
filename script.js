@@ -13,6 +13,7 @@ async function submitPost() {
   const submissionFlair = document.getElementById("submissionFlair").value;
   const usernameFlair = document.getElementById("usernameFlair").value;
   const isNSFW = document.getElementById("isNSFW").checked;
+  console.log("test")
 
   // Update post content on the page
   document.getElementById("displayTitle").innerText = title;
@@ -76,7 +77,7 @@ async function submitPost() {
       submission_flair:submissionFlair || null,
       is_nsfw: !!isNSFW,
       created_at: new Date().toISOString()
-    }])
+    }]) 
     .select();
 
   if (error) {
