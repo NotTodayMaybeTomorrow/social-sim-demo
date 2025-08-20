@@ -6,6 +6,10 @@ const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBh
 import { createClient } from 'npm:@supabase/supabase-js@2';
 const supabaseClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
+function test_clicks(){
+   alert("test");
+}
+
 async function submitPost() {
   const subreddit = "r/" + (document.getElementById("subredditInput").value || "society_sim");
   const title = document.getElementById("title").value;
@@ -13,7 +17,6 @@ async function submitPost() {
   const submissionFlair = document.getElementById("submissionFlair").value;
   const usernameFlair = document.getElementById("usernameFlair").value;
   const isNSFW = document.getElementById("isNSFW").checked;
-  alert("test");
 
   // Update post content on the page
   document.getElementById("displayTitle").innerText = title;
@@ -124,7 +127,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Event listeners
   loadDataBtn.addEventListener('click', loadData);
-  submitBtn.addEventListener('click', submitPost);
+  // submitBtn.addEventListener('click', submitPost);
+  submitBtn.addEventListener('click', test_clicks);
 
   subredditInput.addEventListener("input", (e) => {
     validateForm();
