@@ -72,8 +72,8 @@ async function submitPost() {
       subreddit,
       title,
       content,
-      submission_flair:submissionFlair || null,
       username_flair:usernameFlair || null,
+      submission_flair:submissionFlair || null,
       is_nsfw: !!isNSFW,
       created_at: new Date().toISOString()
     }])
