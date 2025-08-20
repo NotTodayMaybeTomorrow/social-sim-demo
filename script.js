@@ -6,10 +6,6 @@ const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBh
 import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2";
 const supabaseClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-function test_clicks(){
-   alert("test");
-}
-
 async function submitPost() {
   const subreddit = "r/" + (document.getElementById("subredditInput").value || "society_sim");
   const title = document.getElementById("title").value;
@@ -127,8 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Event listeners
   loadDataBtn.addEventListener('click', loadData);
-  // submitBtn.addEventListener('click', submitPost);
-  submitBtn.addEventListener('click', test_clicks);
+  submitBtn.addEventListener('click', submitPost);
 
   subredditInput.addEventListener("input", (e) => {
     validateForm();
