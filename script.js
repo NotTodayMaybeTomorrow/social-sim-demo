@@ -38,7 +38,8 @@ async function submitPost() {
     if (submissionFlair) {
       metaText += `<span class="submission-flair">${submissionFlair}</span>`;
     }
-    if (isNSFW) {trim()
+    if (isNSFW) {
+      // metaText = metaText.trim();
       metaText += '<span class="nsfw-tag">🔞 NSFW</span>';
     }
     metaText += '</span>';
