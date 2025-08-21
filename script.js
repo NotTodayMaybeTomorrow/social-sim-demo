@@ -104,13 +104,22 @@ document.addEventListener('DOMContentLoaded', () => {
     counterElement.textContent = `${currentLength}/${maxLength}`;
   }
 
-  async function loadData() {
-    output.textContent = 'Loading...';
+  // async function loadData() {
+  //   output.textContent = 'Loading...';
+  //   const { data, error } = await supabaseClient.from('submissions').select('*');
+  //   if (error) {
+  //     output.textContent = 'Error: ' + error.message;
+  //   } else {
+  //     output.textContent = JSON.stringify(data, null, 2);
+  //   }
+  // }
+
+   async function loadData() {
     const { data, error } = await supabaseClient.from('submissions').select('*');
     if (error) {
-      output.textContent = 'Error: ' + error.message;
+      console.error('Error loading data:', error);
     } else {
-      output.textContent = JSON.stringify(data, null, 2);
+      console.log('Data loaded successfully:', data);
     }
   }
 
