@@ -3,8 +3,13 @@ const SUPABASE_URL = 'https://wfwrdegsjjqlxskvnlgb.supabase.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Indmd3JkZWdzampxbHhza3ZubGdiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQ5Nzg0NzIsImV4cCI6MjA3MDU1NDQ3Mn0.30ABDqOfCH9KnITUVjkT75XULgDFpaSyOo_tNi-Mxzk';
 
 // Initialize Supabase client
-import { createClient } from '@supabase/supabase-js';
+// import { createClient } from '@supabase/supabase-js';
+import { createClient } from 'https://esm.sh/@supabase/supabase-js';
 const supabaseClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+// function showAlert(message = "ert") {
+//   alert(message);
+// }
 
 async function submitPost() {
   const subreddit = "r/" + (document.getElementById("subredditInput").value || "society_sim");
