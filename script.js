@@ -53,20 +53,20 @@ async function submitPost() {
   const { data: comments, error: commentsError } = await supabaseClient
   .from('comments')
   .select('author, content')
-  .eq('submission_id', null)
+  .is('submission_id', null)
   .order('id', { ascending: true })
   .limit(5);
 
   if (commentsError) {
     console.error("Error loading comments:", commentsError);
+    commentsList.innerHTML = `<li>Failed to load comments: ${commentsError.message}</li>`;
   } else {
     commentsList.innerHTML = comments
       .map(c => `<li>${c.content}</li>`)
       .join("");
+      commentsHeader.innerText = `Comments (${comments?.length ?? 0})`;
   }
 
-  // Clear previous comments and add new ones
-  commentsList.innerHTML = comments.slice(0, 3).map(c => `<li>${c}</li>`).join("");
 
   // The score will be updated after the "simulation"
   const simulatedScore = Math.floor(Math.random() * 200) - 100;
@@ -94,7 +94,6 @@ async function submitPost() {
   }
 
 }
-
 
 document.addEventListener('DOMContentLoaded', () => {
   const loadDataBtn = document.getElementById('loadDataBtn');
