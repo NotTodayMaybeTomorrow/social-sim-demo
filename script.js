@@ -95,8 +95,6 @@ async function submitPost() {
 
 }
 
-const newSubmission = data[0];
-
 
 document.addEventListener('DOMContentLoaded', () => {
   const loadDataBtn = document.getElementById('loadDataBtn');
