@@ -48,14 +48,22 @@ async function submitPost() {
   // The comments section is added here after submission
   const commentsHeader = document.getElementById("commentsHeader");
   const commentsList = document.getElementById("commentsList");
-
   commentsHeader.innerText = "Comments";
   
-  const comments = [
-    "Wow, really interesting take!",
-    "I'm not sure I agree with this, but it's a good post.",
-    "This is exactly what I needed to read today."
-  ];
+  const { data: comments, error: commentsError } = await supabaseClient
+  .from('comments')
+  .select('author, content')
+  .eq('submission_id', null)
+  .order('id', { ascending: true })
+  .limit(5);
+
+  if (commentsError) {
+    console.error("Error loading comments:", commentsError);
+  } else {
+    commentsList.innerHTML = comments
+      .map(c => `<li>${c.content}</li>`)
+      .join("");
+  }
 
   // Clear previous comments and add new ones
   commentsList.innerHTML = comments.slice(0, 3).map(c => `<li>${c}</li>`).join("");
@@ -86,6 +94,9 @@ async function submitPost() {
   }
 
 }
+
+const newSubmission = data[0];
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const loadDataBtn = document.getElementById('loadDataBtn');
