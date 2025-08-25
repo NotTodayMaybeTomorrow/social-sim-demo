@@ -1,4 +1,4 @@
-# generate_comments.py
+import json
 from typing import List, Dict, Any
 from supabase import create_client, Client
 from openai import OpenAI
@@ -20,76 +20,72 @@ client = OpenAI(api_key=OPENAI_API_KEY, base_url=OPENAI_BASE_URL)
 
 def generate_comments() -> List[Dict[str, Any]]:
     """
-    Full pipeline:
+    Pipeline:
     - Get latest submission from Supabase
     - Collect Reddit data
     - Generate personas (one per author)
-    - Generate 1 synthetic comment per author persona
-    - Save to Supabase
+    - Generate 1 synthetic comment per persona/author
+    - Save into Supabase 'comments' table
     """
-
-    # Step 1: get latest submission
+    # Step 1: latest submission
     latest_submission = get_latest_submission()
     if not latest_submission:
-        print("No submissions found in database")
+        print("[generate_comments] No submissions found")
         return []
 
     # Step 2: collect Reddit data
     data = collect_data()
     if not data:
-        print("No Reddit data collected")
+        print("[generate_comments] No Reddit data collected")
         return []
 
-    # Step 3: generate personas (1 per author)
+    # Step 3: generate personas
     personas = create_personas_from_data(data)
     if not personas:
-        print("No personas generated")
+        print("[generate_comments] No personas generated")
         return []
 
-    # Step 4: generate comments per persona/author
+    # Step 4: LLM generates 1 comment per persona/author
     generated_comments = []
     for persona in personas:
-        author_name = persona.get("author", "unknown_author")
-
         prompt = (
             f"You are role-playing as this Reddit user persona:\n\n"
             f"Interests: {persona['interests']}\n"
             f"Personality Traits: {persona['personality_traits']}\n"
             f"Demographics: {persona['likely_demographics']}\n\n"
-            f"Now, write a single authentic Reddit-style comment "
-            f"replying to this post:\n\n"
+            f"Task: Write ONE authentic Reddit comment replying to this post:\n\n"
             f"Title: {latest_submission['title']}\n"
             f"Content: {latest_submission['content']}\n\n"
-            f"Do not explain or break character. Just write the comment."
+            f"Return ONLY valid JSON with fields:\n"
+            f"{{\"author\": \"fake_reddit_username\", \"content\": \"the comment\"}}"
         )
 
         try:
             response = client.chat.completions.create(
                 model=GPT_OSS_MODEL_NAME,
                 messages=[{"role": "user", "content": prompt}],
+                response_format={"type": "json_object"},
             )
 
-            comment_text = response.choices[0].message.content.strip()
+            comment_obj = json.loads(response.choices[0].message.content)
 
             generated_comments.append(
                 {
-                    "author": author_name,
-                    "persona_id": persona["persona_id"],
-                    "persona_summary": {
-                        "interests": persona["interests"],
-                        "personality_traits": persona["personality_traits"],
-                        "likely_demographics": persona["likely_demographics"],
-                    },
-                    "generated_comment": comment_text,
+                    "submission_id": latest_submission["id"],
+                    "author": comment_obj["author"],
+                    "content": comment_obj["content"],
                 }
             )
 
         except Exception as e:
-            print(f"LLM comment generation failed for {persona['persona_id']}: {e}")
+            print(
+                f"[generate_comments] Failed for persona {persona['persona_id']}: {e}"
+            )
 
-    # Step 5: save into Supabase table
+    # Step 5: save into Supabase "comments" table
     if generated_comments:
-        supabase.table("generated_comments").insert(generated_comments).execute()
+        supabase.table("comments").insert(generated_comments).execute()
+        print(f"[generate_comments] Inserted {len(generated_comments)} comments.")
 
     return generated_comments
 
@@ -98,4 +94,4 @@ if __name__ == "__main__":
     results = generate_comments()
     print("Generated comments:")
     for r in results:
-        print(f"- {r['author']} ({r['persona_id']}): {r['generated_comment']}")
+        print(f"- {r['author']}: {r['content']}")
