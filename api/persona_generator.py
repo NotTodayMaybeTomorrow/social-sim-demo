@@ -1,6 +1,6 @@
 import json
 from openai import OpenAI
-from config import OPENAI_API_KEY, OPENAI_BASE_URL, GPT_OSS_MODEL_NAME
+from api.config import OPENAI_API_KEY, OPENAI_BASE_URL, GPT_OSS_MODEL_NAME
 
 def generate_persona(comments_text):
     """
@@ -14,15 +14,16 @@ def generate_persona(comments_text):
         )
 
         system_prompt = (
-            "You are an expert at creating user personas from their social media comments. "
-            "Your task is to analyze a set of Reddit comments and generate a detailed persona of the author. "
-            "Your output must be a valid JSON object with the following structure:\n"
-            "{\n"
-            "  \"persona_summary\": \"A short paragraph summarizing the persona.\",\n"
-            "  \"interests\": [\"list\", \"of\", \"interests\"],\n"
-            "  \"personality_traits\": [\"list\", \"of\", \"traits\"],\n"
-            "  \"likely_demographics\": \"A brief description of demographics (e.g., 'Male, 20s-30s, hobbyist programmer').\"\n"
-            "}"
+            '''You are an expert in creating user personas from social media comments. Analyze the provided Reddit comments and generate a detailed persona of the author.
+
+                Your output must be a single, valid JSON object with the following schema:
+                {
+                "interests": ["string", "string", ...],
+                "traits": ["string", "string", ...],
+                "region": "one of: NA, EU, EAS, SEA, SA, ME, AF, LATAM, OCE",
+                "age": "one of: teen, 20s, 30s, 40s, 50+, unknown",
+                "gender": "one of: male, female, non-binary, unknown"
+                }'''
         )
 
         response = client.chat.completions.create(

@@ -1,6 +1,6 @@
 import json
-from data_collector import collect_data
-from persona_generator import create_personas_from_data
+from api.data_collector import collect_data
+from api.persona_generator import create_personas_from_data
 
 def run_pipeline():
     """
