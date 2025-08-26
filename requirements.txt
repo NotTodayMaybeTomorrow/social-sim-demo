@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+python-dotenv
+praw
+numpy
+scikit-learn
+sentence-transformers
+supabase
+google-generativeai
+typing-extensions

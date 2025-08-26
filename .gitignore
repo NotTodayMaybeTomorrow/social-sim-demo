@@ -1,3 +1,4 @@
-config.py
-__pycache__/
+.env
 *.pyc
+__pycache__/
+reddit_data.json
