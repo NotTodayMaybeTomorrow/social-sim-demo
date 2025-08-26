@@ -26,10 +26,6 @@ reddit = praw.Reddit(
     user_agent=REDDIT_USER_AGENT,
 )
 
-# Sentence Transformer model
-model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
-
-
 def get_latest_submission() -> Optional[Dict[str, Any]]:
     """Get the most recent submission from Supabase"""
     try:
@@ -108,6 +104,8 @@ def find_similar_posts_embeddings(
     """Find most similar posts using SentenceTransformers embeddings + cosine similarity"""
     if not reddit_posts:
         return []
+
+    model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
 
     try:
         target_text = f"{target_post['title']} {target_post['content']}"
