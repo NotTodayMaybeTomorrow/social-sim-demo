@@ -34,7 +34,7 @@ app = FastAPI()
 def health_check():
     return {"status": "ok"}
 
-@app.post("/generate-comments")
+@app.post("/generate_comments")
 def generate_comments_webhook(payload: dict):
     # 這裡才執行 collect_data / generate_comments
     # 確保只在 webhook 被觸發時才跑
