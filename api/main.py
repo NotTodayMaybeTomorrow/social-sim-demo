@@ -27,6 +27,8 @@
 import os
 from fastapi import FastAPI
 import uvicorn
+from generate_comments import generate_comments, save_comments_safely
+from data_collector import collect_data
 
 app = FastAPI()
 
@@ -41,10 +43,9 @@ def generate_comments_webhook(payload: dict):
     # payload 會包含 Supabase webhook 的資料
     submission_id = payload.get("record", {}).get("id")
 
-    # TODO: 呼叫你的 collect_data() / persona_generator() / insert_to_comments()
-    # example:
-    # final_data = collect_data(submission_id=submission_id)
-    # save_to_comments(final_data)
+    # 呼叫你的 collect_data() / persona_generator() / insert_to_comments()
+    final_data = collect_data(submission_id=submission_id)
+    save_comments_safely(final_data)
 
     return {"message": "comments generated", "submission_id": submission_id}
 
