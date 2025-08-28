@@ -146,8 +146,6 @@ async function submitPost() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const loadDataBtn = document.getElementById('loadDataBtn');
-  const output = document.getElementById('output');
   const subredditInput = document.getElementById("subredditInput");
   const titleInput = document.getElementById("title");
   const contentInput = document.getElementById("content");
@@ -164,11 +162,6 @@ document.addEventListener('DOMContentLoaded', () => {
     counterElement.textContent = `${currentLength}/${maxLength}`;
   }
 
-  async function loadData() {
-    // Load Simulation button - no comments update functionality
-    console.log('Load Simulation button pressed');
-  }
-
   // Enable/disable submit button based on required fields
   function validateForm() {
     const allFilled = subredditInput.value.trim() !== '' &&
@@ -178,7 +171,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Event listeners
-  loadDataBtn.addEventListener('click', loadData);
   submitBtn.addEventListener('click', submitPost);
 
   subredditInput.addEventListener("input", (e) => {
