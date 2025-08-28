@@ -154,6 +154,20 @@ document.addEventListener('DOMContentLoaded', () => {
   const contentCounter = document.getElementById("content-counter");
   const darkModeToggle = document.getElementById('darkModeToggle');
 
+  // Check if all elements exist before proceeding
+  if (!subredditInput || !titleInput || !contentInput || !submitBtn || !titleCounter || !contentCounter || !darkModeToggle) {
+    console.error('One or more DOM elements not found:', {
+      subredditInput: !!subredditInput,
+      titleInput: !!titleInput,
+      contentInput: !!contentInput,
+      submitBtn: !!submitBtn,
+      titleCounter: !!titleCounter,
+      contentCounter: !!contentCounter,
+      darkModeToggle: !!darkModeToggle
+    });
+    return;
+  }
+
   // Set up event listeners
 
   // Function to update character counters
@@ -164,9 +178,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Enable/disable submit button based on required fields
   function validateForm() {
-    const allFilled = subredditInput.value.trim() !== '' &&
-                      titleInput.value.trim() !== '' &&
-                      contentInput.value.trim() !== '';
+    const subredditValue = subredditInput.value.trim();
+    const titleValue = titleInput.value.trim();
+    const contentValue = contentInput.value.trim();
+    
+    const allFilled = subredditValue !== '' &&
+                      titleValue !== '' &&
+                      contentValue !== '';
+    
+    console.log('Validation check:', {
+      subreddit: subredditValue,
+      title: titleValue,
+      content: contentValue,
+      allFilled: allFilled
+    });
+    
     submitBtn.disabled = !allFilled;
   }
 
