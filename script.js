@@ -6,6 +6,64 @@ const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBh
 import { createClient } from 'https://esm.sh/@supabase/supabase-js';
 const supabaseClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
+// Global variables to track state
+let currentSubmissionId = null;
+let lastCommentsCount = 0;
+
+// Function to update comments display
+async function updateCommentsDisplay() {
+  const commentsHeader = document.getElementById("commentsHeader");
+  const commentsList = document.getElementById("commentsList");
+  
+  if (!currentSubmissionId) {
+    commentsHeader.innerText = "Comments";
+    commentsList.innerHTML = "";
+    return;
+  }
+
+  try {
+    const { data: comments, error: commentsError } = await supabaseClient
+      .from('comments')
+      .select('author, content, created_at')
+      .eq('submission_id', currentSubmissionId)
+      .order('created_at', { ascending: true });
+
+    if (commentsError) {
+      console.error("Error loading comments:", commentsError);
+      commentsList.innerHTML = `<li style="color: red;">Failed to load comments: ${commentsError.message}</li>`;
+    } else {
+      // Check if comments count has changed
+      if (comments.length !== lastCommentsCount) {
+        console.log(`Comments updated: ${lastCommentsCount} → ${comments.length}`);
+        lastCommentsCount = comments.length;
+        
+        // Add visual feedback for new comments
+        if (comments.length > 0) {
+          commentsList.style.opacity = '0.7';
+          setTimeout(() => {
+            commentsList.style.opacity = '1';
+          }, 200);
+        }
+      }
+
+      commentsList.innerHTML = comments
+        .map((c, index) => `
+          <li class="comment-item" data-index="${index}">
+            <strong>${c.author || 'Anonymous'}:</strong> ${c.content}
+            <span class="comment-time">${new Date(c.created_at).toLocaleTimeString()}</span>
+          </li>
+        `)
+        .join("");
+      
+      commentsHeader.innerText = `Comments (${comments?.length ?? 0})`;
+    }
+  } catch (error) {
+    console.error("Error updating comments:", error);
+  }
+}
+
+
+
 async function submitPost() {
   const subreddit = "r/" + (document.getElementById("subredditInput").value || "society_sim");
   const title = document.getElementById("title").value;
@@ -42,57 +100,49 @@ async function submitPost() {
   metaText += '</div>';
 
   document.getElementById("displayMeta").innerHTML = `<em>${metaText}</em>`;
-
   document.getElementById("displayContent").innerText = content;
-  
-  // The comments section is added here after submission
-  const commentsHeader = document.getElementById("commentsHeader");
-  const commentsList = document.getElementById("commentsList");
-  commentsHeader.innerText = "Comments";
-  
-  const { data: comments, error: commentsError } = await supabaseClient
-  .from('comments')
-  .select('author, content')
-  .is('submission_id', null)
-  .order('id', { ascending: true })
-  .limit(5);
-
-  if (commentsError) {
-    console.error("Error loading comments:", commentsError);
-    commentsList.innerHTML = `<li>Failed to load comments: ${commentsError.message}</li>`;
-  } else {
-    commentsList.innerHTML = comments
-      .map(c => `<li>${c.content}</li>`)
-      .join("");
-      commentsHeader.innerText = `Comments (${comments?.length ?? 0})`;
-  }
-
 
   // The score will be updated after the "simulation"
   const simulatedScore = Math.floor(Math.random() * 200) - 100;
-  
-  // Update the score on the page
   document.getElementById("displayScore").innerText = simulatedScore;
 
-  const { data, error } = await supabaseClient
-    .from('submissions')
-    .insert([{
-      subreddit,
-      title,
-      content,
-      username_flair:usernameFlair || null,
-      submission_flair:submissionFlair || null,
-      is_nsfw: !!isNSFW,
-      created_at: new Date().toISOString()
-    }]) 
-    .select();
+  try {
+    // Insert the new submission and get the returned data
+    const { data, error } = await supabaseClient
+      .from('submissions')
+      .insert([{
+        subreddit,
+        title,
+        content,
+        username_flair: usernameFlair || null,
+        submission_flair: submissionFlair || null,
+        is_nsfw: !!isNSFW,
+        created_at: new Date().toISOString()
+      }]) 
+      .select();
 
-  if (error) {
-    console.error("Insert failed:", error);
-  } else {
+    if (error) {
+      console.error("Insert failed:", error);
+      return;
+    }
+
     console.log("Insert succeeded:", data);
-  }
+    
+    // Set the current submission ID to the newly created submission
+    if (data && data.length > 0) {
+      currentSubmissionId = data[0].id;
+      console.log("Current submission ID set to:", currentSubmissionId);
+      
+      // Reset comments count
+      lastCommentsCount = 0;
+      
+      // Load initial comments for this submission
+      await updateCommentsDisplay();
+    }
 
+  } catch (error) {
+    console.error("Error submitting post:", error);
+  }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -106,19 +156,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const contentCounter = document.getElementById("content-counter");
   const darkModeToggle = document.getElementById('darkModeToggle');
 
+  // Set up event listeners
+
   // Function to update character counters
   function updateCounter(inputElement, counterElement, maxLength) {
     const currentLength = inputElement.value.length;
     counterElement.textContent = `${currentLength}/${maxLength}`;
   }
 
-   async function loadData() {
-    const { data, error } = await supabaseClient.from('submissions').select('*');
-    if (error) {
-      console.error('Error loading data:', error);
-    } else {
-      console.log('Data loaded successfully:', data);
-    }
+  async function loadData() {
+    // Load Simulation button - no comments update functionality
+    console.log('Load Simulation button pressed');
   }
 
   // Enable/disable submit button based on required fields
@@ -155,5 +203,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // Dark mode toggle functionality
   darkModeToggle.addEventListener('change', () => {
     document.body.classList.toggle('dark-mode', darkModeToggle.checked);
+  });
+
+  // Clean up when page is about to unload
+  window.addEventListener('beforeunload', () => {
+    // No cleanup needed since we removed polling
   });
 });

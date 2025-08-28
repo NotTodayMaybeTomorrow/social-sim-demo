@@ -1,6 +1,6 @@
 import json
 import time
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Tuple
 from supabase import create_client, Client
 import google.generativeai as genai
 
@@ -59,6 +59,7 @@ def generate_comment_with_retry(persona: Dict[str, Any], latest_submission: Dict
                 "submission_id": latest_submission["id"],
                 "author": comment_obj["author"],
                 "content": comment_obj["content"],
+                "persona_id": persona["persona_id"],  # Link comment to persona (for local tracking only)
             }
             
         except json.JSONDecodeError as e:
@@ -88,14 +89,24 @@ def save_comments_safely(generated_comments: List[Dict[str, Any]]) -> bool:
         return False
     
     try:
-        # First, save to backup file
+        # First, save to backup file (with persona_id for reference)
         with open("generated_comments_backup.json", "w") as f:
             json.dump(generated_comments, f, indent=2)
         print(f"💾 Backup saved: generated_comments_backup.json")
         
+        # Remove persona_id before saving to database (not in schema)
+        db_comments = []
+        for comment in generated_comments:
+            db_comment = {
+                "submission_id": comment["submission_id"],
+                "author": comment["author"],
+                "content": comment["content"]
+            }
+            db_comments.append(db_comment)
+        
         # Try to insert into database
-        result = supabase.table("comments").insert(generated_comments).execute()
-        print(f"✅ Successfully saved {len(generated_comments)} comments to database")
+        result = supabase.table("comments").insert(db_comments).execute()
+        print(f"✅ Successfully saved {len(db_comments)} comments to database")
         return True
         
     except Exception as e:
@@ -115,11 +126,27 @@ def save_comments_safely(generated_comments: List[Dict[str, Any]]) -> bool:
         else:
             print(f"❌ Database error: {e}")
             
-        print(f"📁 Comments available in: generated_comments_backup.json")
+        print(f"📄 Comments available in: generated_comments_backup.json")
         return False
 
 
-def generate_comments() -> List[Dict[str, Any]]:
+def save_personas_safely(personas: List[Dict[str, Any]]) -> bool:
+    """Save personas to a backup file"""
+    if not personas:
+        print("No personas to save")
+        return False
+    
+    try:
+        with open("generated_personas_backup.json", "w") as f:
+            json.dump(personas, f, indent=2)
+        print(f"💾 Personas backup saved: generated_personas_backup.json")
+        return True
+    except Exception as e:
+        print(f"❌ Error saving personas: {e}")
+        return False
+
+
+def generate_comments() -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
     """
     Pipeline:
     - Get latest submission from Supabase
@@ -127,24 +154,30 @@ def generate_comments() -> List[Dict[str, Any]]:
     - Generate personas (one per author)
     - Generate 1 synthetic comment per persona/author
     - Save into Supabase 'comments' table
+    
+    Returns:
+        Tuple of (generated_comments, personas)
     """
     # Step 1: latest submission
     latest_submission = get_latest_submission()
     if not latest_submission:
         print("[generate_comments] No submissions found")
-        return []
+        return [], []
 
     # Step 2: collect Reddit data
     data = collect_data()
     if not data:
         print("[generate_comments] No Reddit data collected")
-        return []
+        return [], []
 
     # Step 3: generate personas
     personas = create_personas_from_data(data)
     if not personas:
         print("[generate_comments] No personas generated")
-        return []
+        return [], []
+
+    # Save personas to backup file
+    save_personas_safely(personas)
 
     # Step 4: Gemini generates 1 comment per persona/author with rate limiting
     generated_comments = []
@@ -169,11 +202,67 @@ def generate_comments() -> List[Dict[str, Any]]:
     # Step 5: save into Supabase "comments" table with better error handling
     save_comments_safely(generated_comments)
 
-    return generated_comments
+    return generated_comments, personas
+
+
+def print_results(generated_comments: List[Dict[str, Any]], personas: List[Dict[str, Any]]):
+    """Print formatted results showing both personas and their comments"""
+    print("\n" + "="*80)
+    print("GENERATED PERSONAS AND COMMENTS")
+    print("="*80)
+    
+    # Create a mapping of persona_id to persona for easy lookup
+    persona_map = {persona['persona_id']: persona for persona in personas}
+    
+    for comment in generated_comments:
+        persona_id = comment.get('persona_id')
+        persona = persona_map.get(persona_id, {})
+        
+        print(f"\n🎭 PERSONA: {persona_id}")
+        print(f"   Original Author: {persona.get('author', 'Unknown')}")
+        print(f"   Interests: {', '.join(persona.get('interests', []))}")
+        print(f"   Personality: {', '.join(persona.get('personality_traits', []))}")
+        print(f"   Demographics: {persona.get('likely_demographics', 'N/A')}")
+        
+        print(f"\n💬 GENERATED COMMENT:")
+        print(f"   Author: {comment['author']}")
+        print(f"   Content: {comment['content']}")
+        print("-" * 80)
+    
+    # Also print personas that didn't generate comments
+    comment_persona_ids = {comment.get('persona_id') for comment in generated_comments}
+    unused_personas = [p for p in personas if p['persona_id'] not in comment_persona_ids]
+    
+    if unused_personas:
+        print(f"\n⚠️  PERSONAS WITHOUT COMMENTS ({len(unused_personas)}):")
+        for persona in unused_personas:
+            print(f"   - {persona['persona_id']} (Author: {persona.get('author', 'Unknown')})")
+    
+    print(f"\n📊 SUMMARY:")
+    print(f"   Total Personas Generated: {len(personas)}")
+    print(f"   Total Comments Generated: {len(generated_comments)}")
+    print(f"   Success Rate: {len(generated_comments)/len(personas)*100:.1f}%" if personas else "0%")
 
 
 if __name__ == "__main__":
-    results = generate_comments()
-    print("Generated comments:")
-    for r in results:
-        print(f"- {r['author']}: {r['content']}")
+    generated_comments, personas = generate_comments()
+    
+    if generated_comments or personas:
+        print_results(generated_comments, personas)
+        
+        # Also save combined results to a single file
+        combined_results = {
+            "personas": personas,
+            "comments": generated_comments,
+            "summary": {
+                "total_personas": len(personas),
+                "total_comments": len(generated_comments),
+                "success_rate": len(generated_comments)/len(personas)*100 if personas else 0
+            }
+        }
+        
+        with open("combined_results.json", "w") as f:
+            json.dump(combined_results, f, indent=2)
+        print(f"\n💾 Combined results saved to: combined_results.json")
+    else:
+        print("No results to display.")
