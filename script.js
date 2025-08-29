@@ -9,44 +9,60 @@ const supabaseClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 // Global variables to track state
 let currentSubmissionId = null;
 let lastCommentsCount = 0;
+let subscription = null; // To hold the Supabase subscription
+let subscriptionStartTime = null; // To track when the subscription started
+
+const SUBSCRIPTION_DURATION = 60 * 60 * 1000; // 1 hour in milliseconds
 
 // Function to update comments display
 async function updateCommentsDisplay() {
   const commentsHeader = document.getElementById("commentsHeader");
   const commentsList = document.getElementById("commentsList");
-  
+
+  // If there's no current submission, ensure any existing subscription is ended
   if (!currentSubmissionId) {
     commentsHeader.innerText = "Comments";
     commentsList.innerHTML = "";
+    if (subscription) {
+      subscription.unsubscribe();
+      subscription = null;
+      subscriptionStartTime = null;
+      console.log("Subscription to comments ended because currentSubmissionId is null.");
+    }
     return;
   }
 
+  // Check if subscription already exists and is still active within the duration
+  if (subscription) {
+    if (Date.now() - subscriptionStartTime < SUBSCRIPTION_DURATION) {
+      console.log("Subscription already active for this submission and within time limit.");
+      return; // Already subscribed and within the time limit
+    } else {
+      // Unsubscribe if the duration has passed
+      console.log("Subscription to comments timed out, unsubscribing.");
+      subscription.unsubscribe();
+      subscription = null;
+      subscriptionStartTime = null;
+    }
+  }
+
+  // Start a new subscription
+  console.log(`Subscribing to comments for submission_id: ${currentSubmissionId}`);
+  subscriptionStartTime = Date.now(); // Record the start time
+
   try {
-    const { data: comments, error: commentsError } = await supabaseClient
+    // Fetch initial comments
+    const { data: initialComments, error: initialCommentsError } = await supabaseClient
       .from('comments')
       .select('author, content, created_at')
       .eq('submission_id', currentSubmissionId)
       .order('created_at', { ascending: true });
 
-    if (commentsError) {
-      console.error("Error loading comments:", commentsError);
-      commentsList.innerHTML = `<li style="color: red;">Failed to load comments: ${commentsError.message}</li>`;
+    if (initialCommentsError) {
+      console.error("Error loading initial comments:", initialCommentsError);
+      commentsList.innerHTML = `<li style="color: red;">Failed to load comments: ${initialCommentsError.message}</li>`;
     } else {
-      // Check if comments count has changed
-      if (comments.length !== lastCommentsCount) {
-        console.log(`Comments updated: ${lastCommentsCount} → ${comments.length}`);
-        lastCommentsCount = comments.length;
-        
-        // Add visual feedback for new comments
-        if (comments.length > 0) {
-          commentsList.style.opacity = '0.7';
-          setTimeout(() => {
-            commentsList.style.opacity = '1';
-          }, 200);
-        }
-      }
-
-      commentsList.innerHTML = comments
+      commentsList.innerHTML = initialComments
         .map((c, index) => `
           <li class="comment-item" data-index="${index}">
             <strong>${c.author || 'Anonymous'}:</strong> ${c.content}
@@ -54,15 +70,77 @@ async function updateCommentsDisplay() {
           </li>
         `)
         .join("");
-      
-      commentsHeader.innerText = `Comments (${comments?.length ?? 0})`;
+
+      commentsHeader.innerText = `Comments (${initialComments?.length ?? 0})`;
+      lastCommentsCount = initialComments?.length ?? 0;
     }
+
+    // Set up the real-time subscription
+    subscription = supabaseClient
+      .channel(`comments_subscription_${currentSubmissionId}`) // Use a unique channel name
+      .on('postgres_changes', {
+        event: '*', // Listen to all events (INSERT, UPDATE, DELETE)
+        schema: 'public', // Specify your schema
+        filter: `submission_id=eq.${currentSubmissionId}` // Filter for the current submission
+      }, (payload) => {
+        console.log('Realtime change received:', payload);
+
+        // Handle INSERT event for new comments
+        if (payload.eventType === 'INSERT') {
+          const newComment = payload.new;
+          const newCommentElement = document.createElement('li');
+          newCommentElement.classList.add('comment-item');
+          newCommentElement.innerHTML = `
+            <strong>${newComment.author || 'Anonymous'}:</strong> ${newComment.content}
+            <span class="comment-time">${new Date(newComment.created_at).toLocaleTimeString()}</span>
+          `;
+          commentsList.appendChild(newCommentElement);
+
+          // Update header and count
+          const currentCount = commentsList.children.length;
+          commentsHeader.innerText = `Comments (${currentCount})`;
+          lastCommentsCount = currentCount;
+
+          // Visual feedback for new comments
+          commentsList.style.opacity = '0.7';
+          setTimeout(() => {
+            commentsList.style.opacity = '1';
+          }, 200);
+        }
+
+        // Check if the subscription should continue after any real-time event
+        if (Date.now() - subscriptionStartTime >= SUBSCRIPTION_DURATION) {
+          if (subscription) {
+            console.log("Subscription to comments timed out, unsubscribing.");
+            subscription.unsubscribe();
+            subscription = null;
+            subscriptionStartTime = null;
+          }
+        }
+      })
+      .subscribe((status) => {
+        console.log(`Subscription status: ${status}`);
+        if (status === 'CHANNEL_ERROR' || status === 'CLOSED') {
+          // Handle connection errors or unexpected closures
+          console.error(`Subscription error or closed for submission ${currentSubmissionId}`);
+          if (subscription) {
+            subscription.unsubscribe();
+            subscription = null;
+            subscriptionStartTime = null;
+          }
+        }
+      });
+
   } catch (error) {
-    console.error("Error updating comments:", error);
+    console.error("Error setting up comments subscription:", error);
+    // Ensure the subscription is cleaned up if an error occurs during setup
+    if (subscription) {
+      subscription.unsubscribe();
+      subscription = null;
+      subscriptionStartTime = null;
+    }
   }
 }
-
-
 
 async function submitPost() {
   const subreddit = "r/" + (document.getElementById("subredditInput").value || "society_sim");
@@ -74,17 +152,17 @@ async function submitPost() {
 
   // Update post content on the page
   document.getElementById("displayTitle").innerText = title;
-  
+
   // Construct the meta string with styled flairs and new line layout
   let metaText = '<div class="post-meta">';
-  
+
   // First line: Posted by with username flair
   metaText += '<span class="post-meta-line">Posted by u/username';
   if (usernameFlair) {
     metaText += ` <span class="username-flair">${usernameFlair}</span>`;
   }
   metaText += '</span>';
-  
+
   // Second line: Submission flair and NSFW tag (if present)
   if (submissionFlair || isNSFW) {
     metaText += '<span class="post-meta-line">';
@@ -96,14 +174,14 @@ async function submitPost() {
     }
     metaText += '</span>';
   }
-  
+
   metaText += '</div>';
 
   document.getElementById("displayMeta").innerHTML = `<em>${metaText}</em>`;
   document.getElementById("displayContent").innerText = content;
 
   // The score will be updated after the "simulation"
-  const simulatedScore = Math.floor(Math.random() * 200) - 100;
+  const simulatedScore = 0; // Start at 0 for new posts
   document.getElementById("displayScore").innerText = simulatedScore;
 
   try {
@@ -118,7 +196,7 @@ async function submitPost() {
         submission_flair: submissionFlair || null,
         is_nsfw: !!isNSFW,
         created_at: new Date().toISOString()
-      }]) 
+      }])
       .select();
 
     if (error) {
@@ -127,16 +205,16 @@ async function submitPost() {
     }
 
     console.log("Insert succeeded:", data);
-    
+
     // Set the current submission ID to the newly created submission
     if (data && data.length > 0) {
       currentSubmissionId = data[0].id;
       console.log("Current submission ID set to:", currentSubmissionId);
-      
+
       // Reset comments count
       lastCommentsCount = 0;
-      
-      // Load initial comments for this submission
+
+      // Load initial comments for this submission and start listening
       await updateCommentsDisplay();
     }
 
@@ -168,8 +246,6 @@ document.addEventListener('DOMContentLoaded', () => {
     return;
   }
 
-  // Set up event listeners
-
   // Function to update character counters
   function updateCounter(inputElement, counterElement, maxLength) {
     const currentLength = inputElement.value.length;
@@ -181,18 +257,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const subredditValue = subredditInput.value.trim();
     const titleValue = titleInput.value.trim();
     const contentValue = contentInput.value.trim();
-    
+
     const allFilled = subredditValue !== '' &&
                       titleValue !== '' &&
                       contentValue !== '';
-    
+
     console.log('Validation check:', {
       subreddit: subredditValue,
       title: titleValue,
       content: contentValue,
       allFilled: allFilled
     });
-    
+
     submitBtn.disabled = !allFilled;
   }
 
@@ -223,8 +299,11 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.classList.toggle('dark-mode', darkModeToggle.checked);
   });
 
-  // Clean up when page is about to unload
+  // Clean up subscriptions when the page is about to unload
   window.addEventListener('beforeunload', () => {
-    // No cleanup needed since we removed polling
+    if (subscription) {
+      console.log("Unsubscribing from comments on page unload.");
+      subscription.unsubscribe();
+    }
   });
 });
