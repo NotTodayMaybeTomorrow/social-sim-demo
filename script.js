@@ -51,6 +51,21 @@ async function updateCommentsDisplay() {
   subscriptionStartTime = Date.now(); // Record the start time
 
   try {
+    // SET THE RLS SETTING!
+    const { error: rpcError } = await supabaseClient.rpc('set_config', {
+        key: 'app.current_submission_id',
+        value: String(currentSubmissionId) // Ensure it's a string
+    });
+
+    if (rpcError) {
+        console.error("Error setting RLS config:", rpcError);
+        commentsList.innerHTML = `<li style="color: red;">Failed to set RLS config: ${rpcError.message}</li>`;
+        return; // Don't proceed if we can't set the RLS config
+    } else {
+        console.log("Successfully set RLS config for submission_id:", currentSubmissionId);
+    }
+
+
     // Fetch initial comments
     const { data: initialComments, error: initialCommentsError } = await supabaseClient
       .from('comments')
