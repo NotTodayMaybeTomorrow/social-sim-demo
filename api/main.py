@@ -62,7 +62,7 @@ async def read_root():
     """
     return {"message": "Welcome to the Social Media Comment Generator API!"}
 
-@app.post("/generate-comments", response_model=GenerationResponse)
+@app.post("/generate_comments", response_model=GenerationResponse)
 async def generate_and_save_comments():
     """
     Triggers the process of fetching Reddit data, generating personas,
