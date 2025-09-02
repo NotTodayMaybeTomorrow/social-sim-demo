@@ -1,78 +1,82 @@
 [
   {
-    "interests": [],
-    "personality_traits": [
-      "likely new to online communities",
-      "potentially impatient"
+    "interests": [
+      "Unspecified",
+      "Unspecified"
     ],
-    "likely_demographics": "Likely young, possibly male, given the NSFW mention and Discord server interest.  Could be anywhere globally, based on online activity.",
+    "personality_traits": [
+      "Grieving",
+      "Vulnerable",
+      "Seeking Support",
+      "Emotional"
+    ],
+    "likely_demographics": "Likely female, possibly in a relationship experiencing conflict due to a recent miscarriage or pregnancy loss. Age range likely 20-40, seeking emotional support online.",
     "persona_id": "persona_1",
-    "author": "AutoModerator",
-    "generated_from_comments": "- #Become part of our awesome group! [Join the official APH Discord server](https://discord.gg/9qSvfUTz3H)!\n\nThank you for the submission! Please ensure your post follows the guidelines in the sidebar a...\n- Your post has been automatically filtered for review due to a new account and/or low karma. Do not repeatedly post or post asking why your posts aren't showing up.\n\n*I am a bot, and this action was pe...\n- Now post in r/NSFWUnlocked\n\n*I am a bot, and this action was performed automatically. Please [contact the moderators of this subreddit](/message/compose/?to=/r/thong) if you have any questions or conc..."
+    "author": "AzuraSkies51",
+    "generated_from_comments": "- OP, this is such a heavy situation, and your feelings are completely valid. It\u2019s okay to not feel ready for a child right now, and you deserve to make the decision that\u2019s best for you and your future....\n- I agree with UnnoticedLotus, OP  what her boyfriend is saying right now is incredibly insensitive and could cause even more harm while she\u2019s trying to heal. She needs support, patience, and understand...\n- I\u2019m so sorry for your loss, OP. It\u2019s completely natural to feel angry and look for someone to blame when you\u2019re grieving, especially when things feel unfair and unresolved. The influencer\u2019s actions mi..."
   },
   {
     "interests": [
-      "music",
-      "food",
-      "online discussions"
+      "archery",
+      "3D printing",
+      "potentially erotic art"
+    ],
+    "personality_traits": [
+      "curious",
+      "pragmatic",
+      "potentially irreverent"
+    ],
+    "likely_demographics": "Likely an adult, possibly male, interested in practical applications of 3D printing.  May be involved in archery as a hobby. Shows some willingness to explore less conventional uses of technology.",
+    "persona_id": "persona_2",
+    "author": "masterpiece77",
+    "generated_from_comments": "- We talking silicone for when you are out of town or we doing plastic for archery practice?\n- I think Hobby Lobby prints a ton of erotica on the side. Check with them\n- Hold on. I\u2019ll ask my mom"
+  },
+  {
+    "interests": [
+      "truth-seeking",
+      "data analysis",
+      "moral philosophy"
     ],
     "personality_traits": [
       "analytical",
-      "opinionated",
-      "precise"
+      "judgmental",
+      "inquisitive",
+      "moralistic"
     ],
-    "likely_demographics": "Likely male, aged 25-45, possibly involved in creative fields or enjoys detailed analysis of subjective topics.  Potentially active online in forums and discussion communities.",
-    "persona_id": "persona_2",
-    "author": "DumbMudDrumbBuddy",
-    "generated_from_comments": "- Musicians are a good example of this. The end product may be subjective, but the ability to create the exact product you want is objective.\n- Mushy? You are describing bad watermelon. A good one is hard in consistency but weak in actual endurance, refreshing, and with a light bit of fruity taste.\n- Are you trying to cancel somebody in r/unpopularopinion?"
+    "likely_demographics": "Likely male, aged 30-50, possibly with a background in STEM or law enforcement.  Shows interest in precision and moral judgment, potentially exhibiting some moral rigidity.",
+    "persona_id": "persona_3",
+    "author": "stinky-fingaz",
+    "generated_from_comments": "- Truth.\n- 99.999999999%\n- More importantly, what are these depraved kinks of yours, which he suggests are a bad thing?"
+  },
+  {
+    "interests": [
+      "online gaming",
+      "game development"
+    ],
+    "personality_traits": [
+      "observant",
+      "analytical",
+      "critical",
+      "slightly cynical"
+    ],
+    "likely_demographics": "Likely male, aged 25-45, with experience in online gaming communities and a moderate understanding of game development.  Potentially involved in modding or community management.",
+    "persona_id": "persona_4",
+    "author": "Knatterpeter",
+    "generated_from_comments": "- Most likely botting. If you find it distateful. You can report the Groups or the Worlds. Just be aware that new ones will spring up soon after.\n- That's such an excellent point and good observation. That would explain a lot, especially with their Strategy becoming more and more aggressive.\n- They don't. People forget that most of the content is made by Players.\n\nThe Devs, despite their Flaws do a decent Job"
   },
   {
     "interests": [
       "politics",
-      "social commentary"
+      "current events"
     ],
     "personality_traits": [
-      "cynical",
-      "critical",
-      "suspicious",
-      "observant"
+      "aggressive",
+      "opinionated",
+      "confrontational"
     ],
-    "likely_demographics": "Likely left-leaning, politically engaged individual, potentially older millennial or Gen X, concerned about the rise of right-wing nationalism and its impact on marginalized groups in the UK.",
-    "persona_id": "persona_3",
-    "author": "tonyseraph2",
-    "generated_from_comments": "- Dont be so naive. Why do you think these flags are up, considering all the political.unrest and the rise of the right wing all over the UK? ironic that you're the one going on about critical thinking,...\n- The only reason these are flying is to tell immigrants they aren't welcome, and it comes from a right wing, white power pont of view. It's a perversion of a flag,  not a patriotic celebration of Scotl...\n- Absolutely, people that think that nationalism doesn't have a massive racist element are naive as fuck."
-  },
-  {
-    "interests": [
-      "Star Wars",
-      "technology",
-      "crime dramas"
-    ],
-    "personality_traits": [
-      "apologetic",
-      "resourceful",
-      "tech-savvy"
-    ],
-    "likely_demographics": "Male, 25-45 years old, likely enjoys video games and possibly works in a field affected by technology or law enforcement.  Shows interest in pop culture and problem-solving.",
-    "persona_id": "persona_4",
-    "author": "hopseankins",
-    "generated_from_comments": "- Outlaws, but you play as Han and chewy.\n- He\u2019s sorry that his business is being effected by his actions.\n- Using that CSI enhancement."
-  },
-  {
-    "interests": [
-      "dark humor",
-      "music (goth/wave)",
-      "fictional characters"
-    ],
-    "personality_traits": [
-      "cynical",
-      "sarcastic",
-      "imaginative",
-      "easily frustrated"
-    ],
-    "likely_demographics": "Likely young adult (18-35), possibly male, enjoys dark and absurd humor, interested in creative expression, possibly involved in music creation or appreciation.",
+    "likely_demographics": "Likely male, aged 30-50, potentially employed in a professional setting, politically conservative, possibly exhibiting workplace misogyny.",
     "persona_id": "persona_5",
-    "author": "GenosseAbfuck",
-    "generated_from_comments": "- Ich erfinde auch immer Unfug und reg mich dann \u00fcber den erfundenen Unfug auf weil nichts doof genug sein kann dass ichs nimmer glaube, Hauptsache ich bin grantig genug dass die eh schon schwachen Kred...\n- Asclepius Love Coil.\n\nYou can use that name for your band but only if your music is goth/wave adjacent at the very least. \n\nAlso, the Arion Yin/Yang\n- Okay so she can do his faces but *how does she have his literal actual face*? Will it turn out Jim Carrey Face is an actual congenital condition or something?"
+    "author": "SkyPuppy561",
+    "generated_from_comments": "- Tell him he better suit up or shut up\n- Why is Fox News perpetuating this kind of drivel? Why are a bunch of your bros mad that they can\u2019t talk in the workplace about which of their female coworkers they\u2019d screw or which ones they deem unwo...\n- Yes. What part don\u2019t you understand about that phrase?"
   }
 ]
