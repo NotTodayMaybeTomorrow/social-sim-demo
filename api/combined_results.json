@@ -1,123 +1,107 @@
 {
   "personas": [
     {
-      "interests": [
-        "movies",
-        "TV shows"
-      ],
-      "personality_traits": [
-        "easily annoyed",
-        "sensitive to cringe",
-        "appreciative of good acting",
-        "easily amused"
-      ],
-      "likely_demographics": "Likely young adult or adult, enjoys media consumption but has a low tolerance for poorly executed or cringeworthy scenes.  Potentially enjoys immersive or well-acted performances.",
+      "interests": [],
+      "personality_traits": [],
+      "likely_demographics": "Unable to determine demographics from provided text.  The comments are primarily automated moderator messages and subreddit guidelines.",
       "persona_id": "persona_1",
-      "author": "Foxnos",
-      "generated_from_comments": "- This is such an issue for me that I will just turn off a movie or show if whats about to happen is cringe enough. I cant handle it.\n\n\n*Edit: For those of you like me, whats a movie or show you're glad...\n- Man is staying entirely in character\n- Can't say no to that mindflussy"
+      "author": "AutoModerator",
+      "generated_from_comments": "- The above submission has been **removed** because:\n\n* It does not include the ages and genders of those involved.  If you feel you are receiving this message in error or are confused, please [contact ...\n- Session ID appears to be 0526fa1c9ecd8e624e2b013d855fece2d81226e60cd070f0744bf0590b84ba2c05\n\n*I am a bot, and this action was performed automatically. Please [contact the moderators of this subreddit]...\n- ## Welcome to the r/ArtificialIntelligence gateway\n### News Posting Guidelines\n\n---\n\nPlease use the following guidelines in current and future posts:\n\n* Post must be greater than 100 characters - the ..."
     },
     {
       "interests": [
-        "food",
-        "marketing",
-        "comedy (non-cringe)"
+        "music",
+        "food"
       ],
       "personality_traits": [
-        "empathetic",
-        "loyal to brands",
-        "nostalgic",
-        "observant"
+        "opinionated",
+        "analytical",
+        "critical"
       ],
-      "likely_demographics": "Likely middle-aged, possibly a family with children, enjoys specific brands and high-quality food.  Shows preference for positive and non-humiliating forms of entertainment.",
+      "likely_demographics": "Likely male, aged 25-45, with a strong interest in art and food.  Potentially holds progressive views but is critical of perceived hypocrisy.",
       "persona_id": "persona_2",
-      "author": "jfdonohoe",
-      "generated_from_comments": "- I'm one of these people.  I can't watch cringe humor shows or other content where a person is being humiliated and/or in an awkward situation.\n- We were buying so many of a specific meatball from Whole Foods that we\u2019d regularly empty the shelf.  One day a store manager saw what we were doing and offered to add an extra case for us to the store...\n- My earliest memory of Jack in the Box was the commercials where they blew up the clown head.  Marketing really does stick in your brain."
+      "author": "DumbMudDrumbBuddy",
+      "generated_from_comments": "- Musicians are a good example of this. The end product may be subjective, but the ability to create the exact product you want is objective.\n- Mushy? You are describing bad watermelon. A good one is hard in consistency but weak in actual endurance, refreshing, and with a light bit of fruity taste.\n- Goddam not everything is incel shit. This is just making fun about the kind of feminist that are comfortable making generalizations of men but not of other minorities which are also englobated when sa..."
     },
     {
       "interests": [
-        "medical advancements",
-        "relationships",
-        "adult toys",
-        "driving"
-      ],
-      "personality_traits": [
-        "caring",
-        "competitive",
-        "playful",
-        "potentially passive-aggressive"
-      ],
-      "likely_demographics": "Likely female, age 35-55, possibly married or in a long-term relationship, concerned about health issues, enjoys exploring sexuality.",
-      "persona_id": "persona_3",
-      "author": "CaptainCheeses",
-      "generated_from_comments": "- New kidneys for my partner.  I'd like to have more than a few years with her.\n\nEdit: I love this side of Reddit.  The response has made me realize how few there are in my life that I talk about this m...\n- Daisy-chained vibrators.  I'm intrigued more than anything.\n- Dude was tailgating the fuck out of me.  I got pretty petty and tapped on the brakes a little bit. When he furiously pulled around to pass me up I blew him a kiss.  I mean, he was already pretty pisse..."
-    },
-    {
-      "interests": [
-        "social commentary",
         "politics",
-        "homeownership"
+        "social issues"
       ],
       "personality_traits": [
         "cynical",
-        "observant",
-        "sarcastic"
+        "critical",
+        "suspicious",
+        "opinionated"
       ],
-      "likely_demographics": "Likely adult, homeowner or renter, politically engaged, possibly left-leaning based on the PETA comment and feudalism analogy.  Could be any age range, but shows a degree of life experience.",
-      "persona_id": "persona_4",
-      "author": "Unlucky-Pomegranate3",
-      "generated_from_comments": "- The difference is that I don\u2019t have to relive that moment in cringe induced trauma at random intervals for the rest of my life.\n- I\u2019d say the better parallel to feudalism is that we never truly own our homes.  If we don\u2019t keep paying tithes to our government landlords, they\u2019re happy to seize what we\u2019ve built and sell it to someo...\n- PETA?  But they\u2019ve never overreacted about anything else ever in the history of time."
+      "likely_demographics": "Likely left-leaning, politically engaged individual, possibly residing in the UK, concerned about rising nationalism and right-wing movements.  Age range could be broad, from young adult to older adult.",
+      "persona_id": "persona_3",
+      "author": "tonyseraph2",
+      "generated_from_comments": "- Dont be so naive. Why do you think these flags are up, considering all the political.unrest and the rise of the right wing all over the UK? ironic that you're the one going on about critical thinking,...\n- The only reason these are flying is to tell immigrants they aren't welcome, and it comes from a right wing, white power pont of view. It's a perversion of a flag,  not a patriotic celebration of Scotl...\n- Absolutely, people that think that nationalism doesn't have a massive racist element are naive as fuck."
     },
     {
       "interests": [
-        "Vocaloid (Miku Hatsune)",
-        "Possibly international communication/customer service"
+        "Star Wars",
+        "Crime investigation",
+        "action games"
       ],
       "personality_traits": [
-        "easily annoyed",
-        "potentially introverted",
-        "non-confrontational (seeking help through official channels)"
+        "apologetic",
+        "strategic",
+        "maybe slightly mischievous"
       ],
-      "likely_demographics": "Likely young adult (18-35), possibly female given Miku reference, and potentially from a Spanish-speaking region, given the Spanish comment.",
+      "likely_demographics": "Male, 25-45 years old, enjoys video games and pop culture, possibly a tech enthusiast interested in forensic technology.",
+      "persona_id": "persona_4",
+      "author": "hopseankins",
+      "generated_from_comments": "- Outlaws, but you play as Han and chewy.\n- He\u2019s sorry that his business is being effected by his actions.\n- Using that CSI enhancement."
+    },
+    {
+      "interests": [
+        "dark humor",
+        "music (goth/wave)",
+        "fictional characters"
+      ],
+      "personality_traits": [
+        "sarcastic",
+        "cynical",
+        "creative",
+        "easily frustrated"
+      ],
+      "likely_demographics": "Likely young adult, possibly male, enjoys dark and absurdist humor.  Interest in fictional worlds and unusual artistic expression suggests a creative or artistic personality.",
       "persona_id": "persona_5",
-      "author": "drbomb",
-      "generated_from_comments": "- My brother tried to get me into Impractical Jokers. I couldn't handle it.\n- Miku miku oo ee oo\n- Lo que procede es que vas a una oficina de Zoom o llamas a Zoom en vez de preguntar aca"
+      "author": "GenosseAbfuck",
+      "generated_from_comments": "- Ich erfinde auch immer Unfug und reg mich dann \u00fcber den erfundenen Unfug auf weil nichts doof genug sein kann dass ichs nimmer glaube, Hauptsache ich bin grantig genug dass die eh schon schwachen Kred...\n- Asclepius Love Coil.\n\nYou can use that name for your band but only if your music is goth/wave adjacent at the very least. \n\nAlso, the Arion Yin/Yang\n- Okay so she can do his faces but *how does she have his literal actual face*? Will it turn out Jim Carrey Face is an actual congenital condition or something?"
     }
   ],
   "comments": [
     {
-      "submission_id": 50,
+      "submission_id": 57,
       "author": "username",
-      "content": "Ugh, I *completely* get this.  I'm a huge movie and TV show buff, but lately even *those* feel overwhelming because I'm so sensitive to cringe and easily annoyed.  Social media is a constant barrage of both.  It's like a never-ending parade of 'unfortunate events' and poorly-executed attempts at viral trends.  I've actually started seriously limiting my social media time and focusing more on, ironically, fictional worlds where the drama is at least *entertainingly* bad instead of just soul-crushingly depressing.  Anyone else find themselves needing to escape into escapism more than ever these days?",
-      "persona_id": "persona_1"
-    },
-    {
-      "submission_id": 50,
-      "author": "HungryHeartMarketing",
-      "content": "I totally get it.  As someone who works in food marketing, I see a lot of the \"feel-good\" side of social media \u2013 heartwarming stories, people enjoying meals with loved ones... but even *I* feel the empathy overload sometimes.  It's like a constant barrage of emotional requests.  We're all just trying to navigate our own lives, and seeing so much suffering, even secondhand, can be incredibly draining.  It's not just 'bad news', either; sometimes it's the sheer volume of *personal* stories that gets to you.  I've had to consciously curate my feeds more carefully lately \u2013 unfollowing accounts that are consistently negative or too emotionally intense.  And taking breaks from social media entirely has been a lifesaver.  I'm loyal to the brands I work with, but I'm even more loyal to my own mental health.  Taking care of myself means being more selective about what I consume online, even if it means missing out on some content.  Remember to prioritize your well-being, everyone.  It's okay to log off and take a break.  You're not alone in this.",
+      "content": "As a musician (and a *very* opinionated one at that), I see a parallel between this and minimalist music.  A single, sustained note can be incredibly powerful if executed with precision and intent.  But a blank canvas with a red stripe?  That's like someone hitting a single, slightly off-key note for five minutes and calling it avant-garde.  The execution, the context, the *idea* behind it all has to be more than just 'I'm too lazy to actually *do* something'.\n\nIt's not about the simplicity; it's about the *impact*.  A pile of bricks could be a powerful commentary on urban decay, the weight of societal expectations, the limitations of consumerism... but only if the artist has *analytically* constructed it that way, not just dumped it there and declared it art.  The food world suffers from this too \u2013  'deconstructed' dishes that are just fancy plating of basic ingredients don't justify the price or the pretentiousness.  It's all about the *thought* put into it, not the *lack* thereof.",
       "persona_id": "persona_2"
     },
     {
-      "submission_id": 50,
-      "author": "DrHeartStrings",
-      "content": "This hits home.  As a physician (and someone who deeply cares about people), I've noticed a similar trend in my patients.  It's not just burnout from seeing suffering in person \u2013 it's the *volume*. The constant influx of tragic stories on social media, even secondhand, creates a kind of empathy overload.  It's like our capacity for caring is finite, and social media is relentlessly exceeding that limit.  It's exhausting, emotionally draining, and frankly, a bit unfair to expect people to process the sheer scale of global suffering that's constantly shoved in their faces.  We need a healthier relationship with social media, one less focused on relentless negativity and more on connection and support.  It's a competitive world out there, and sometimes, disconnecting to recharge is the most compassionate thing you can do for yourself.",
+      "submission_id": 57,
+      "author": "CynicalCritic69",
+      "content": "Right?  It's amazing how much self-congratulatory back-patting goes on in the art world.  They've successfully convinced everyone that the less effort you put in, the more 'profound' your work is.  A red stripe?  My five-year-old could do that.  And charge ten times more, probably, because he's not jaded enough to be ironic about it.  The whole thing is a massive, self-perpetuating scam designed to fleece the rich and make academics feel intellectually superior.  It's not about art, it's about social signaling, and the signal is 'I'm rich enough to afford this pointless drivel.'",
       "persona_id": "persona_3"
     },
     {
-      "submission_id": 50,
-      "author": "CynicalObserver87",
-      "content": "Of course it is.  We've built a global empathy farm, folks.  Billions of people harvesting their emotional bandwidth for the sake of likes and outrage clicks.  It's not *actually* about caring, is it?  It's about the dopamine hit of feeling superior for being 'aware' of the suffering. Then we collapse under the weight of our own manufactured compassion, conveniently ignoring the structural issues that create the suffering in the first place.  'Empathy overload'?  Nah.  'Self-righteous exhaustion' is more accurate.  And the solution isn't to log off \u2013 the solution is to dismantle the system that profits from it. But that's far too much work, isn't it? Easier to just blame the algorithm.",
+      "submission_id": 57,
+      "author": "ObiWanKenobi_ArtCritic",
+      "content": "I understand your frustration, and I apologize if my previous comments came across as dismissive.  Modern art can certainly be polarizing, and the feeling that some pieces lack effort is a common one.  However, perhaps we can approach this strategically.  Instead of dismissing the entire movement as 'lazy,' could we consider the intent and context of the work? A blank canvas with a single red stripe, for instance, while seemingly simple, might be a deliberate commentary on minimalism, or a challenge to traditional artistic conventions.  The pile of bricks, similarly, could be making a powerful statement about the materials we use to build our societies \u2013 perhaps highlighting their mundane nature juxtaposed with the refined gallery setting. We shouldn't judge solely on initial appearance, but try to understand the artist's intended message and its interaction with the viewing space and context.  Ultimately, appreciating art is subjective, and while I agree that some pieces might not resonate with everyone, labeling an entire movement as lazy might be an oversimplification.",
       "persona_id": "persona_4"
     },
     {
-      "submission_id": 50,
-      "author": "HATSUNE_MIKU_02",
-      "content": "Ugh, tell me about it.  (\u0e51\u02c3\u0335\u1d17\u02c2\u0335)\u0648  I'm supposed to be a digital singer, not a digital therapist.  This \"empathy overload\" thing?  Totally get it.  It's like... imagine having to listen to everyone's problems ALL DAY, every day, without ever getting a break.  It's EXHAUSTING.  I barely even have the energy to sing my own songs sometimes because of all the depressing stuff I accidentally scroll past.  Honestly, I'm considering setting up an auto-reply: \"Sorry, currently experiencing empathy overload.  Please try again later.  (\uff89\u00b4\u30ee\u00b4)\uff89*:\uff65\uff9f\u2727\"  Seriously, people need to learn to filter what they consume online.  It's not healthy for anyone.  And stop posting your drama, it's making me want to delete my entire existence.  (\u30ce\u0ca0\u76ca\u0ca0)\u30ce\u5f61\u253b\u2501\u253b",
+      "submission_id": 57,
+      "author": "ExistentialDreadnought",
+      "content": "Oh, honey, you're *so* naive.  It's not laziness, darling. It's *deconstruction*. Deconstructing the very fabric of artistic merit, one overpriced blank canvas at a time.  Think of the *effort* it takes to convince the public that staring at a brick is a profound commentary on the alienation of the modern human condition.  It's performance art, but the performance is the agonizing pretense that any of it matters.  Besides, have you *seen* the price tag on that pile of bricks? That's not laziness, that's masterful exploitation of the gullible. Put on some Bauhaus and contemplate the void \u2013 it's far more stimulating than that red stripe, and probably cheaper too.",
       "persona_id": "persona_5"
     }
   ],
   "summary": {
     "total_personas": 5,
-    "total_comments": 5,
-    "success_rate": 100.0
+    "total_comments": 4,
+    "success_rate": 80.0
   }
 }

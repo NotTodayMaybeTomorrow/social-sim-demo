@@ -4,9 +4,11 @@ uvicorn[standard]
 sentence-transformers
 redis
 python-dotenv
+python-multipart
 supabase
 praw
 google-generativeai
 numpy
 scikit-learn
 python-dotenv
+gunicorn
