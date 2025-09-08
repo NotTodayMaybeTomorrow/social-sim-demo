@@ -39,6 +39,14 @@ def generate_persona(comments_text: str, max_retries: int = 3):
 
 Comments:
 {comments_text}"""
+    
+    # Configure generation parameters
+    generation_config = genai.types.GenerationConfig(
+        temperature=1.0,
+        # max_output_tokens=1024,  # Adjust as needed
+        top_p=0.95,              # Optional: controls nucleus sampling, Higher = more diverse vocabulary
+        top_k=100                # Optional: controls top-k sampling, Higher = more word choices
+    )
 
     for attempt in range(max_retries):
         try:
