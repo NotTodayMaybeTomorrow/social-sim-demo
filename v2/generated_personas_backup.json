@@ -2,12 +2,11 @@
   {
     "interests": [],
     "personality_traits": [
-      "concerned",
-      "observant",
-      "slightly anxious",
-      "curious"
+      "Concerned",
+      "Observant",
+      "Slightly Paranoid"
     ],
-    "likely_demographics": "Likely adult (given driving experience and child care), possibly female (use of 'babe').  Shows concern for health and safety, suggesting a responsible and caring individual.  May have experienced unusual neurological events.",
+    "likely_demographics": "Adult, possibly mid-30s to 50s, parent, driver.  Shows concern for others' health and safety, and a willingness to share personal anecdotes related to unusual experiences.",
     "persona_id": "persona_1",
     "generated_from_cluster": [
       "Babe. See a doctor thats weird! Has it happened before? Absent seizures are a thing someone close to me has checked out for a minute or two and it's very fucking odd.\u00a0",
@@ -23,17 +22,17 @@
   },
   {
     "interests": [
-      "time anomalies",
+      "time perception",
       "unexplained phenomena",
       "shared experiences"
     ],
     "personality_traits": [
       "observant",
       "curious",
-      "slightly skeptical",
-      "open-minded"
+      "analytical",
+      "slightly anxious"
     ],
-    "likely_demographics": "Adults (30-50s), likely parents, possibly smokers, interested in mysteries and the paranormal, potentially with some scientific background or curiosity, diverse geographic locations (based on travel mentions).",
+    "likely_demographics": "Adults aged 30-50, likely parents, possibly with some skepticism towards the paranormal but intrigued by unusual occurrences.  They enjoy sharing personal anecdotes and exploring potential explanations for strange events.",
     "persona_id": "persona_2",
     "generated_from_cluster": [
       "Had the hours of Saturday evening pass in a similar manner with three friends.  We weren't on psychedelics or drugs.  But the entire evening flew by with the hours passing like minutes.",
@@ -47,15 +46,15 @@
       "mystery",
       "paranormal",
       "time travel",
-      "adventure stories"
+      "narrative games"
     ],
     "personality_traits": [
       "curious",
-      "analytical",
-      "open-minded",
-      "slightly skeptical"
+      "observant",
+      "suspicious",
+      "analytical"
     ],
-    "likely_demographics": "Likely an adult (25-55), possibly male or female, interested in unexplained phenomena and storytelling.  They enjoy sharing and discussing unusual experiences online.",
+    "likely_demographics": "Likely an adult (25-50) interested in mystery and possibly horror; may enjoy video games, podcasts, or other media focused on these themes.  They could be a gamer or someone who frequently encounters and shares unusual stories.",
     "persona_id": "persona_3",
     "generated_from_cluster": [
       "this game is getting stranger and stranger, either its breaking down or the nightmare is about to get way worse.",
@@ -70,16 +69,16 @@
   {
     "interests": [
       "paranormal experiences",
-      "temporal anomalies",
-      "personal anecdotes"
+      "unexplained phenomena",
+      "time distortion"
     ],
     "personality_traits": [
       "observant",
+      "reflective",
       "curious",
-      "slightly apprehensive",
-      "prone to introspection"
+      "slightly anxious"
     ],
-    "likely_demographics": "Adults aged 25-45, possibly with a background in creative fields or a penchant for the mysterious.  They may be located in the US, given the references to common TV viewing habits and place names.",
+    "likely_demographics": "Adults (25-45 years old) with a potential interest in the paranormal, possibly experiencing sleep disturbances or unusual temporal perceptions.  They may be introspective and share experiences online seeking validation or explanation.",
     "persona_id": "persona_4",
     "generated_from_cluster": [
       "When i used to stay with my parents in this house we lived in. Some times when id walk threw the doors, its like their would be a invisible wall or msgical barrier. Id 4get who i was for a brief moment or id zone out and stand against the wall try to remember why i even left my room to go to the kitchen. Id remember i need to use the bathroom but couldnt do anything only to end up back in the room. \n\nStrange thing is, if i would lay down. Id feel like i had been walking around that house for years.... just mindlessley walking around... zombie mood or something.",
@@ -120,7 +119,7 @@
       "The Matrix",
       "video games (GTA, LA Noire)",
       "dreams",
-      "unexplained phenomena"
+      "paranormal phenomena"
     ],
     "personality_traits": [
       "observant",
@@ -129,7 +128,7 @@
       "prone to vivid dreams",
       "open-minded"
     ],
-    "likely_demographics": "Likely young adult (18-35), possibly living in or near Western New York, interested in pop culture and science fiction.  May have a creative or analytical mind, possibly involved in media or technology.",
+    "likely_demographics": "Likely young adult (18-35), possibly living in or near Western New York, interested in pop culture and science fiction, enjoys speculating about reality and the nature of consciousness.",
     "persona_id": "persona_5",
     "generated_from_cluster": [
       "Rule out any medical things of course\u2026but that does sound very glitch in the Matrix-y.",
@@ -151,11 +150,11 @@
     ],
     "personality_traits": [
       "curious",
-      "analytical",
       "open-minded",
-      "reflective"
+      "reflective",
+      "detail-oriented"
     ],
-    "likely_demographics": "Adult (50s), likely female, interested in unexplained events and personal experiences. Possibly possesses a strong memory and a tendency towards introspection.  Shows interest in historical accounts and validating personal experiences.",
+    "likely_demographics": "Adults aged 50 and older with an interest in the paranormal, possibly with a background in experiencing or researching unusual events.  They are likely open to alternative explanations of reality, such as simulation theory.",
     "persona_id": "persona_6",
     "generated_from_cluster": [
       "Deja vu a lot of times. But time skipping never.",
@@ -182,15 +181,15 @@
   },
   {
     "interests": [
-      "paranormal experiences",
-      "time travel theories"
+      "paranormal activity",
+      "time travel"
     ],
     "personality_traits": [
       "open-minded",
       "curious",
-      "slightly apprehensive"
+      "slightly anxious"
     ],
-    "likely_demographics": "Likely adult (30-55), possibly male or female, interested in unexplained phenomena and science fiction.  May have some familiarity with conspiracy theories or alternate realities.",
+    "likely_demographics": "Likely adult (30-55), possibly male or female, interested in speculative fiction and unexplained phenomena.  May have a background in science or technology or a strong interest in those fields, perhaps leading to an interest in theoretical physics and quantum mechanics.",
     "persona_id": "persona_7",
     "generated_from_cluster": [
       "I don\u2019t care if that was a real or imagined experience.   Thanks for sharing. I enjoyed reading it.   \ud83d\ude0e",
@@ -207,10 +206,10 @@
     "personality_traits": [
       "curious",
       "skeptical",
-      "open-minded",
-      "potentially collaborative"
+      "potentially collaborative",
+      "open to sharing stories"
     ],
-    "likely_demographics": "Likely a podcast listener, potentially a storyteller themselves, possibly based in or familiar with Latin America (given the Spanish podcast request).  Age range likely 25-55, interested in storytelling and the paranormal.",
+    "likely_demographics": "Likely a young adult or adult interested in podcasts and paranormal activity.  Potentially involved in podcasting themselves.  Spanish speaker given a request to use a story in a Spanish-language podcast from Bogot\u00e1, Colombia.",
     "persona_id": "persona_8",
     "generated_from_cluster": [
       "Awesome story for the Jim Harold's Campfire podcast!",
@@ -222,9 +221,10 @@
   },
   {
     "interests": [
-      "time travel paradoxes",
-      "temporal anomalies",
-      "glitch recording"
+      "time loops",
+      "paradoxes",
+      "recording glitches",
+      "mystery"
     ],
     "personality_traits": [
       "curious",
@@ -232,7 +232,7 @@
       "slightly anxious",
       "open-minded"
     ],
-    "likely_demographics": "Likely adult (25-45), possibly experiencing a stressful life event, interested in science fiction and metaphysics, potentially dealing with unresolved trauma or uncertainty, possibly tech-savvy enough to record video/audio.",
+    "likely_demographics": "Likely adult, possibly experiencing a stressful or unusual situation.  Could be male or female.  Shows interest in documenting unusual phenomena and seeking explanations for confusing events.",
     "persona_id": "persona_9",
     "generated_from_cluster": [
       "If you can record such glitches, please do it!",
@@ -248,17 +248,17 @@
     "interests": [
       "unexplained phenomena",
       "conspiracy theories",
-      "hypnotherapy (with reservations)",
+      "hypnotherapy",
       "ice cream"
     ],
     "personality_traits": [
       "empathetic",
       "curious",
       "humorous",
-      "slightly cynical",
-      "open-minded (with a healthy dose of skepticism)"
+      "slightly paranoid",
+      "open-minded"
     ],
-    "likely_demographics": "Likely an adult (given the 2011 reference and nuanced responses), potentially interested in technology (mentions dash cams), and enjoys dark humor and absurdist commentary.  Could range in age from 25 to 55, geographically diverse.",
+    "likely_demographics": "Likely adult (30-50s), possibly male or female, interested in the unusual and paranormal, with a sense of humor.  Could be from any background, but shows interest in technology (dashcams) and pop culture references.",
     "persona_id": "persona_10",
     "generated_from_cluster": [
       "I've got no answers for you, but I just want to say I believe you. Something weird happened. Do you have a dash cam? Maybe get one in case something happens again.",
