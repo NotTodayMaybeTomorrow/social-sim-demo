@@ -1,41 +1,13 @@
 [
   {
-    "interests": [
-      "personal anecdotes",
-      "unusual experiences",
-      "medical phenomena"
-    ],
+    "interests": [],
     "personality_traits": [
-      "concerned",
-      "curious",
-      "observant",
-      "slightly anxious",
-      "shares personal experiences readily"
+      "Concerned",
+      "Observant",
+      "Slightly Paranoid",
+      "Analytical"
     ],
-    "likely_demographics": {
-      "age": [
-        "30-50"
-      ],
-      "gender": [
-        "female",
-        "male"
-      ],
-      "ethnicity": [
-        "unspecified"
-      ],
-      "nationality": [
-        "unspecified"
-      ],
-      "location": [
-        "unspecified"
-      ],
-      "education": [
-        "unspecified"
-      ],
-      "political_ideology": [
-        "unspecified"
-      ]
-    },
+    "likely_demographics": "Adult, possibly female, based on language and tone, likely has children, possibly experiencing health issues or unusual neurological events, and drives a vehicle.",
     "persona_id": "persona_1",
     "generated_from_cluster": [
       "Babe. See a doctor thats weird! Has it happened before? Absent seizures are a thing someone close to me has checked out for a minute or two and it's very fucking odd.\u00a0",
@@ -51,44 +23,17 @@
   },
   {
     "interests": [
-      "experiencing time distortion",
-      "shared experiences",
-      "mystery",
-      "supernatural"
+      "unexplained phenomena",
+      "time distortion",
+      "shared experiences"
     ],
     "personality_traits": [
       "observant",
-      "analytical",
       "curious",
-      "slightly skeptical",
-      "open-minded",
-      "concerned (regarding time anomalies)"
+      "slightly anxious",
+      "open-minded"
     ],
-    "likely_demographics": {
-      "age": [
-        "30-50"
-      ],
-      "gender": [
-        "male",
-        "female"
-      ],
-      "ethnicity": [
-        "unspecified"
-      ],
-      "nationality": [
-        "American"
-      ],
-      "location": [
-        "New Mexico",
-        "US"
-      ],
-      "education": [
-        "high school or higher"
-      ],
-      "political ideology": [
-        "unspecified"
-      ]
-    },
+    "likely_demographics": "Adults (30-50 years old) likely with families, potentially interested in paranormal activities or mysteries.  They value shared experiences and discussions.  May live in suburban or rural areas based on anecdotal locations.",
     "persona_id": "persona_2",
     "generated_from_cluster": [
       "Had the hours of Saturday evening pass in a similar manner with three friends.  We weren't on psychedelics or drugs.  But the entire evening flew by with the hours passing like minutes.",
@@ -99,42 +44,18 @@
   },
   {
     "interests": [
-      "paranormal experiences",
-      "time anomalies",
-      "mysterious events",
-      "storytelling"
+      "mystery",
+      "paranormal",
+      "time travel",
+      "strange occurrences"
     ],
     "personality_traits": [
       "curious",
-      "observant",
+      "analytical",
       "open-minded",
-      "slightly apprehensive",
-      "inclined to share personal experiences"
+      "slightly skeptical"
     ],
-    "likely_demographics": {
-      "age": [
-        "25-45"
-      ],
-      "gender": [
-        "male",
-        "female"
-      ],
-      "ethnicity": [
-        "unspecified"
-      ],
-      "nationality": [
-        "unspecified"
-      ],
-      "location": [
-        "unspecified"
-      ],
-      "education": [
-        "unspecified"
-      ],
-      "political ideology": [
-        "unspecified"
-      ]
-    },
+    "likely_demographics": "Likely an adult (25-55), possibly male, interested in unexplained phenomena and storytelling.  May enjoy gaming or participate in online forums discussing strange experiences.",
     "persona_id": "persona_3",
     "generated_from_cluster": [
       "this game is getting stranger and stranger, either its breaking down or the nightmare is about to get way worse.",
@@ -149,8 +70,8 @@
   {
     "interests": [
       "paranormal experiences",
-      "time distortion",
-      "unexplained phenomena"
+      "unexplained phenomena",
+      "time distortion"
     ],
     "personality_traits": [
       "observant",
@@ -158,29 +79,7 @@
       "slightly anxious",
       "open-minded"
     ],
-    "likely_demographics": {
-      "age": [
-        "25-45"
-      ],
-      "gender": [
-        "Unspecified - could be male or female"
-      ],
-      "ethnicity": [
-        "Unspecified"
-      ],
-      "nationality": [
-        "Unspecified"
-      ],
-      "location": [
-        "Unspecified, potentially rural based on mention of 'piney woods'"
-      ],
-      "education": [
-        "Unspecified"
-      ],
-      "political_ideology": [
-        "Unspecified"
-      ]
-    },
+    "likely_demographics": "Adults (25-45) interested in the paranormal, possibly with a history of experiencing unusual temporal or spatial disorientation.  Could be experiencing sleep disorders or undiagnosed conditions.  May live in or near areas with local legends/unusual geography.",
     "persona_id": "persona_4",
     "generated_from_cluster": [
       "When i used to stay with my parents in this house we lived in. Some times when id walk threw the doors, its like their would be a invisible wall or msgical barrier. Id 4get who i was for a brief moment or id zone out and stand against the wall try to remember why i even left my room to go to the kitchen. Id remember i need to use the bathroom but couldnt do anything only to end up back in the room. \n\nStrange thing is, if i would lay down. Id feel like i had been walking around that house for years.... just mindlessley walking around... zombie mood or something.",
@@ -218,43 +117,19 @@
   },
   {
     "interests": [
-      "movies (especially The Matrix)",
-      "video games (GTA V, LA Noire)",
+      "The Matrix",
+      "video games (GTA, LA Noire)",
       "dreams",
       "paranormal phenomena"
     ],
     "personality_traits": [
       "observant",
       "questioning",
-      "analytical",
-      "prone to vivid dreams",
-      "open-minded",
       "slightly skeptical",
-      "curious"
+      "intrigued by the unusual",
+      "prone to vivid dreams"
     ],
-    "likely_demographics": {
-      "age": [
-        "25-45"
-      ],
-      "gender": [
-        "Unspecified"
-      ],
-      "ethnicity": [
-        "Unspecified"
-      ],
-      "nationality": [
-        "Unspecified"
-      ],
-      "location": [
-        "Western New York"
-      ],
-      "education": [
-        "Unspecified"
-      ],
-      "political ideology": [
-        "Unspecified"
-      ]
-    },
+    "likely_demographics": "Likely young adult (18-35), possibly living in or near Western New York, interested in pop culture and science fiction, potentially experiencing sleep disturbances or difficulties distinguishing dreams from reality.",
     "persona_id": "persona_5",
     "generated_from_cluster": [
       "Rule out any medical things of course\u2026but that does sound very glitch in the Matrix-y.",
@@ -270,42 +145,16 @@
   },
   {
     "interests": [
-      "paranormal experiences",
+      "paranormal phenomena",
       "time travel",
-      "memory",
-      "Liverpool Time Slip case",
-      "1950s"
+      "memory"
     ],
     "personality_traits": [
       "curious",
-      "open-minded",
       "reflective",
-      "detail-oriented",
-      "possibly skeptical (due to some comments questioning the experience)"
+      "open-minded"
     ],
-    "likely_demographics": {
-      "age": "50s",
-      "gender": [
-        "male",
-        "female"
-      ],
-      "ethnicity": [
-        "unspecified"
-      ],
-      "nationality": [
-        "unspecified"
-      ],
-      "location": [
-        "unspecified",
-        "potentially UK given Liverpool reference"
-      ],
-      "education": [
-        "unspecified"
-      ],
-      "political_ideology": [
-        "unspecified"
-      ]
-    },
+    "likely_demographics": "Adult (50s), potentially with a background in or interest in unexplained phenomena, possibly experiencing or researching unusual memory events, possibly female given the use of 'OP' in comments.",
     "persona_id": "persona_6",
     "generated_from_cluster": [
       "Deja vu a lot of times. But time skipping never.",
@@ -332,40 +181,16 @@
   },
   {
     "interests": [
-      "paranormal experiences",
-      "time travel",
-      "alternative realities"
+      "paranormal phenomena",
+      "time travel theories"
     ],
     "personality_traits": [
       "open-minded",
       "curious",
-      "slightly anxious",
-      "empathetic",
-      "accepting"
+      "slightly skeptical",
+      "empathetic"
     ],
-    "likely_demographics": [
-      {
-        "age": "35-55"
-      },
-      {
-        "gender": "unspecified"
-      },
-      {
-        "ethnicity": "unspecified"
-      },
-      {
-        "nationality": "unspecified"
-      },
-      {
-        "location": "unspecified"
-      },
-      {
-        "education": "unspecified"
-      },
-      {
-        "political ideology": "unspecified"
-      }
-    ],
+    "likely_demographics": "Likely adult (30-55), possibly male or female, interested in science fiction and mystery.  Could be a reader of speculative fiction or someone who follows unexplained phenomena online.",
     "persona_id": "persona_7",
     "generated_from_cluster": [
       "I don\u2019t care if that was a real or imagined experience.   Thanks for sharing. I enjoyed reading it.   \ud83d\ude0e",
@@ -374,42 +199,18 @@
   },
   {
     "interests": [
-      "paranormal",
       "podcasting",
-      "storytelling",
-      "alien abduction stories"
+      "paranormal stories",
+      "alien abduction stories",
+      "storytelling"
     ],
     "personality_traits": [
       "curious",
       "skeptical",
       "sharing",
-      "interested in others' experiences"
+      "collaborative"
     ],
-    "likely_demographics": {
-      "age": [
-        "25-45"
-      ],
-      "gender": [
-        "male",
-        "female"
-      ],
-      "ethnicity": [
-        "Hispanic/Latinx"
-      ],
-      "nationality": [
-        "Colombian"
-      ],
-      "location": [
-        "Bogot\u00e1, Colombia"
-      ],
-      "education": [
-        "some college",
-        "college graduate"
-      ],
-      "political_ideology": [
-        "unspecified"
-      ]
-    },
+    "likely_demographics": "Likely a fan of podcasts, particularly those focused on paranormal or supernatural themes.  Potentially a storyteller themselves, possibly with an interest in creating their own podcast.  May reside in a Spanish-speaking region, possibly South America, given the podcast collaboration request.",
     "persona_id": "persona_8",
     "generated_from_cluster": [
       "Awesome story for the Jim Harold's Campfire podcast!",
@@ -421,41 +222,17 @@
   },
   {
     "interests": [
-      "time loops",
-      "glitches in reality",
-      "paradoxes",
-      "observation"
+      "time travel paradoxes",
+      "glitch observation",
+      "temporal anomalies"
     ],
     "personality_traits": [
       "curious",
       "analytical",
-      "concerned",
-      "cautious",
-      "slightly anxious"
+      "slightly anxious",
+      "open-minded"
     ],
-    "likely_demographics": {
-      "age": [
-        "25-45"
-      ],
-      "gender": [
-        "Unspecified - could be male or female"
-      ],
-      "ethnicity": [
-        "Unspecified"
-      ],
-      "nationality": [
-        "Unspecified"
-      ],
-      "location": [
-        "Unspecified"
-      ],
-      "education": [
-        "Unspecified - likely some level of higher education, given analytical nature"
-      ],
-      "political ideology": [
-        "Unspecified"
-      ]
-    },
+    "likely_demographics": "Likely young adult (20s-30s), possibly experiencing a stressful or confusing event related to time or reality.  They are inquisitive and seek to understand unusual phenomena, demonstrating a fascination with the paranormal or metaphysical.",
     "persona_id": "persona_9",
     "generated_from_cluster": [
       "If you can record such glitches, please do it!",
@@ -470,41 +247,16 @@
   {
     "interests": [
       "unexplained phenomena",
-      "conspiracy theories",
       "hypnotherapy",
       "ice cream"
     ],
     "personality_traits": [
       "empathetic",
-      "curious",
       "humorous",
-      "slightly cynical",
+      "slightly paranoid",
       "open-minded"
     ],
-    "likely_demographics": {
-      "age": [
-        "25-45"
-      ],
-      "gender": [
-        "male",
-        "female"
-      ],
-      "ethnicity": [
-        "unspecified"
-      ],
-      "nationality": [
-        "unspecified"
-      ],
-      "location": [
-        "unspecified"
-      ],
-      "education": [
-        "unspecified"
-      ],
-      "political_ideology": [
-        "unspecified"
-      ]
-    },
+    "likely_demographics": "Likely adult, possibly male or female, interested in conspiracy theories and the paranormal.  May have experienced a strange event and is seeking validation and explanation.",
     "persona_id": "persona_10",
     "generated_from_cluster": [
       "I've got no answers for you, but I just want to say I believe you. Something weird happened. Do you have a dash cam? Maybe get one in case something happens again.",

@@ -34,7 +34,7 @@ def generate_persona(comments_text: str, max_retries: int = 3):
 {{
   "interests": ["hobby1", "hobby2"],
   "personality_traits": ["trait1", "trait2"],
-  "likely_demographics": ["age", "gender", "ethnicity", "nationality", "location", "education", "political ideology"]
+  "likely_demographics": "brief desc (<= 50 words)"
 }}
 
 Comments:

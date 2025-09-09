@@ -1,0 +1,339 @@
+{
+  "personas": [
+    {
+      "interests": [],
+      "personality_traits": [
+        "Concerned",
+        "Observant",
+        "Slightly Paranoid",
+        "Analytical"
+      ],
+      "likely_demographics": "Adult, possibly female, based on language and tone, likely has children, possibly experiencing health issues or unusual neurological events, and drives a vehicle.",
+      "persona_id": "persona_1",
+      "generated_from_cluster": [
+        "Babe. See a doctor thats weird! Has it happened before? Absent seizures are a thing someone close to me has checked out for a minute or two and it's very fucking odd.\u00a0",
+        "Holy timeslip, Batman! Ya, that was little you seeing big you. It really does happen now and again.. So cool that your dad remembers that day!",
+        "You know having Deja Vu can be a sign of a Focal Seizure.. maybe you need to get evaluated",
+        "You likely had an episode of some sort since you were \u201cextremely tired.\u201d Maybe see your doctor about this and explain to them what happened?",
+        "This doesn\u2019t explain your glitch, but just as a PSA \u2014 It\u2018s so important to pull over immediately when you start feeling the \u201ccan\u2019t keep my eyes open\u201d tiredness. That is the first stage of sleep, and you\u2019re already losing your ability to keep yourself in control of your vehicle. Sometimes the relief of knowing you\u2019re \u201calmost there\u201d is all it takes to relax you into full sleep. \n\nI grew up being taught all the tricks like opening a window, drinking a cold soda, turning up the radio, etc. I pushed these sleepy driving moments too far before one day, I was \u201csuddenly\u201d in a ditch on top of a street sign. I had babies in the car with me. Never again!",
+        "That's really odd. Have you tried having a go at remembering a little past being at the light / just before seeing the sign? It can be easiest to catch that sort of memory as you're on the edge of drifting to sleep.",
+        "Double timeslip. Timeslip into future and then into past.\u00a0",
+        "Suppose you were walking past each other and you pushed him in front of the bus?\n\n   Discuss.",
+        "Power outages in general just make things strange...."
+      ]
+    },
+    {
+      "interests": [
+        "unexplained phenomena",
+        "time distortion",
+        "shared experiences"
+      ],
+      "personality_traits": [
+        "observant",
+        "curious",
+        "slightly anxious",
+        "open-minded"
+      ],
+      "likely_demographics": "Adults (30-50 years old) likely with families, potentially interested in paranormal activities or mysteries.  They value shared experiences and discussions.  May live in suburban or rural areas based on anecdotal locations.",
+      "persona_id": "persona_2",
+      "generated_from_cluster": [
+        "Had the hours of Saturday evening pass in a similar manner with three friends.  We weren't on psychedelics or drugs.  But the entire evening flew by with the hours passing like minutes.",
+        "I swear just the other day something similar happened to me. I went outside to smoke a cigarette (I know, I shouldn't, but anyways...), I read an article or 2, it felt like about 20 minutes. I'd gone outside at 11pm. A show was on TV streaming, 20 minute episodes, no ads, a series I've seen countless times before.  So when I got back inside, the next episode was just starting, which aligned with my approximate 20 minute estimate of time outside.  But all the clocks (analog, digital, battery run, as well as plugged in, every clock, even my cell phone), suddenly showed it was past 1pm. Over 2 hours had gone by. But only the one 20 minute show had played on TV. My kids were inside and confirmed the TV never paused or shut off the show. So somehow over 2 hours had passed, while I smoked one cigarette and while only one 20 minute TV show had played.  I'd even told the kids before i went out, that it was 11pm, getting late, they'd have to go to bed when I got back in. None of us could figure out how over 2 hours has gone by. I'd normally NEVER let my kids stay up past 1am, even on summer non-school nights. I'd forgotten about it till I just read your post. Spooky stuff...",
+        "So wait, you've come to this space and observed for hours at a time on multiple occasions...? And the people are always the same? Or it's different characters but those doing their own loops somewhat synced with a couple others??",
+        "This happened to me in 2018. My husband and I were driving to Los Lunas from Albuquerque which should take 45 min, an hour tops. We stopped once for about 5 minutes and bought a coke, no one else was in line. \nAnyway, the map kept saying 15 more minutes for what seemed like FOREVER... But we weren't checking our phones because we were talking, listening to music and just not paying attention to the time. Anyway, the person we were going to see finally texts and is like... I thought you said you were on the way??? We were supposed to be there by about 1, and it was now 4:30... We have no idea what happened. We didn't turn off anywhere, we didn't stop anywhere else, we didn't get stuck in traffic. And on the way back, it took about 40 minutes exactly. So fucking weird"
+      ]
+    },
+    {
+      "interests": [
+        "mystery",
+        "paranormal",
+        "time travel",
+        "strange occurrences"
+      ],
+      "personality_traits": [
+        "curious",
+        "analytical",
+        "open-minded",
+        "slightly skeptical"
+      ],
+      "likely_demographics": "Likely an adult (25-55), possibly male, interested in unexplained phenomena and storytelling.  May enjoy gaming or participate in online forums discussing strange experiences.",
+      "persona_id": "persona_3",
+      "generated_from_cluster": [
+        "this game is getting stranger and stranger, either its breaking down or the nightmare is about to get way worse.",
+        "I had the opposite happen the other day where I did a shitload of things and the clock had barely moved. It made no sense at all.",
+        "Ask your dad if he and his brother had ever taken you on that ride when you were a kid",
+        "You went thru a portal..or was abducted and transported back to your trip/destination",
+        "I've had similar.",
+        "There is a similar story but it was a kid on a hiking trip passed himself on The trail going the opposite way",
+        "Something similar has happened to me too."
+      ]
+    },
+    {
+      "interests": [
+        "paranormal experiences",
+        "unexplained phenomena",
+        "time distortion"
+      ],
+      "personality_traits": [
+        "observant",
+        "curious",
+        "slightly anxious",
+        "open-minded"
+      ],
+      "likely_demographics": "Adults (25-45) interested in the paranormal, possibly with a history of experiencing unusual temporal or spatial disorientation.  Could be experiencing sleep disorders or undiagnosed conditions.  May live in or near areas with local legends/unusual geography.",
+      "persona_id": "persona_4",
+      "generated_from_cluster": [
+        "When i used to stay with my parents in this house we lived in. Some times when id walk threw the doors, its like their would be a invisible wall or msgical barrier. Id 4get who i was for a brief moment or id zone out and stand against the wall try to remember why i even left my room to go to the kitchen. Id remember i need to use the bathroom but couldnt do anything only to end up back in the room. \n\nStrange thing is, if i would lay down. Id feel like i had been walking around that house for years.... just mindlessley walking around... zombie mood or something.",
+        "Can be a form of seizure. Could also be a microsleep if you were relaxed. If it happens more than once in a blue moon then go speak to a doctor to be safe!",
+        "I've seen so many of these posts *today* and it so happened that yesterday after I got off work and had dinner, I know it was only about 6pm because my husband commented on how early it still was and we already finished dinner. We watched - I swear - only 1 30min episode of a show, and then it was suddenly closing in on 9pm. He didn't seem to notice anything different. But it really feels like time jumped 2ish hours. I *always* get tired around 9pm (I wake up around 6am). Last night, I wasn't tired until midnight, even with taking melatonin. Something just felt off.",
+        "i remember being a child, around 6-7yrs old. i was in my room twiddling with something like a roll of paper. i could hear my parents watching the tv, lights on an everything. suddenly, it was like i came to my senses, my parents went to sleep, lights off, no sound from the tv. i was still twiddling with the roll, have no idea what happened",
+        "[deleted]",
+        "[removed]",
+        "The piney woods ?  ;)\n\na glitch would check out there all right.  that place is weird.",
+        "Checkpoint",
+        "So freaky!",
+        ".",
+        "Where is this place?  Maybe someone else can go there and corroborate this?",
+        "Those 4 are probably just some ghosts stuck in this loop. And you're probably the only one who can see them. Try to find out if in the past 4 people died in this corner Shop. Maybe there was a fire,shooting or something similar tragic that made them stuck.",
+        "Whoa, straight out of a Stephen King book \u2026",
+        "This is the age of high tech technology any claims should be backed by digital proof.",
+        "America?",
+        "where is this",
+        "Read Custodians by Dolores Cannon, it explains \ud83d\udd96",
+        "Maybe there are some traffic cams in the town. It would be interesting to research.",
+        "Check your Google maps timeline. If it's enabled it will show where you were.",
+        " This happened to me 2 days ago......\n\nSo other day I was driving home from work. Part of road where I drive past my mates place I always look in to see if his home as you do, then after his place there is a set of traffic lights with a speed camera I always slowdown for just in case, ( and I did remember doing that too) So I went past his place and the speed \ud83d\udcf7 continued driving. Then I felt weird can't explain it blinked few times then it was like a rewinded cos I was back before his place probably even more then couple km back and went though the same process again I was so shocked I know 100% I passed that part of the road still blowing my mind.",
+        "What song was it?",
+        "Go to hospi & get checked out asap",
+        "get a carbon monoxide detector if u dont have it",
+        "I\u2019d almost say abduction, but it was early morning and I\u2019m assuming lots of other drivers around you?",
+        "So, let me get this straight, you had the opportunity to do something straight out of r/hypotheticalsituation e.g., if you could tell your younger self one thing what would it be, and you did absolutely NOTHING besides stop and stare?!?!?!?!?!?!?!?!?!?!?!?!?!?!?!?!?\n\nDude, you had YEARS to prep ... at least yell out BUY BITCOIN",
+        "So interesting!",
+        "\ud83d\ude33",
+        "Welcome to the club!",
+        "![gif](giphy|prMjLP3mHrtOo)\n\nAmazed I am the first to offer this observation. I humbly accept the honor.",
+        "You needed to see that for some f*cled up reason lol",
+        "Do you remember channel's name or programme's name by any chance? I would love to have a crack at it."
+      ]
+    },
+    {
+      "interests": [
+        "The Matrix",
+        "video games (GTA, LA Noire)",
+        "dreams",
+        "paranormal phenomena"
+      ],
+      "personality_traits": [
+        "observant",
+        "questioning",
+        "slightly skeptical",
+        "intrigued by the unusual",
+        "prone to vivid dreams"
+      ],
+      "likely_demographics": "Likely young adult (18-35), possibly living in or near Western New York, interested in pop culture and science fiction, potentially experiencing sleep disturbances or difficulties distinguishing dreams from reality.",
+      "persona_id": "persona_5",
+      "generated_from_cluster": [
+        "Rule out any medical things of course\u2026but that does sound very glitch in the Matrix-y.",
+        "Definitely referring to Darien Lake in Western NY.",
+        "I see everyone is joking about this but OP,\nI had an analogous experience: people looping, like the black cat in the movie (the glitch in \u201cThe Matrix\u201d) that gives this sub its name.",
+        "I don\u2019t know, sounds like a couple people in the neighborhood are trying to get their 10k steps in. Going into the shops and coming out with nothing isn\u2019t that surprising, they might be getting something small enough to fit in a bag they already have, might have just been browsing, might have ordered something for another time. I think you should try talking to them. You can\u2019t really say it\u2019s a glitch if you haven\u2019t even tried to get a logical explanation.\u00a0",
+        "Sounds like an open world game and you\u2019re trying to talk to NPCs.  I don\u2019t suppose you\u2019ve been playing a lot of GTAV or LA Noire lately?\n\nHonestly I have immense trouble separating my vivid dreams from reality, a LOT.\n\nIf there really is a matrix, I feel as though I\u2019m sitting one leg in, one out.",
+        "This is definitely not the base reality. And if it's glitching like that, it's loosing its purpose at this point, if it ever was for good",
+        "That\u2019s eerie! It sounds like you\u2019ve wandered onto a movie set where the extras only got one scene to act out. Definitely try to catch it on video. it\u2019s\u00a0\u00a0either \u00a0a Matrix glitch, or the world\u2019s most dedicated d\u00e9j\u00e0 vu.",
+        "I love how once people suggested recording we got no further updates",
+        "Everything happening all at once. You got the confirmation. Just dont ponder too deep about it."
+      ]
+    },
+    {
+      "interests": [
+        "paranormal phenomena",
+        "time travel",
+        "memory"
+      ],
+      "personality_traits": [
+        "curious",
+        "reflective",
+        "open-minded"
+      ],
+      "likely_demographics": "Adult (50s), potentially with a background in or interest in unexplained phenomena, possibly experiencing or researching unusual memory events, possibly female given the use of 'OP' in comments.",
+      "persona_id": "persona_6",
+      "generated_from_cluster": [
+        "Deja vu a lot of times. But time skipping never.",
+        "All the time, but mine was related to severe early childhood trauma, and followed all my life. Still happens from time to time, in my early 50s now.",
+        "A time slip? Scary and cool at the same time.",
+        "This story seriously reminds me of the famous 1979 \u201cLiverpool Time Slip\u201d case. Two men, Frank and Geoff, were walking along Bold Street when they suddenly found themselves in what appeared to be the 1950s\u2014complete with vintage storefronts, cars, and people in period clothing. One of them even claimed to walk into an old-fashioned shop and interact with people before snapping back to present day. What\u2019s wild is that later investigation showed the shop he thought he entered (Debenhams) used to actually be a clothing store in that exact location during the 1950s. He even described the interior in stunning detail.\n\nJust like your experience, there was no portal or beam of light\u2014just a subtle but inexplicable moment where the rules of time and space didn\u2019t seem to apply. The fact that you recognized one of the people as your dad\u2019s younger self and only confirmed it later through photo hits the same eerie note.\n\nMaybe these glitches are less full-on time travel and more like overlaps in the simulation\u2014brief moments where time folds or data crosswires. Emotionally charged memories or locations can also act like magnets for these phenomena.\n\nReports like yours make an intriguing case. Thanks for sharing. Very cool.",
+        "Yes, I agree with Liverpool comment but wow! To experience that must have been incredible- especially having confirmation from your dad. How did you feel at the time (anything different?)",
+        "The brain is powerful, your memory of them projected them in \u201creal time\u201d to view.\n\nEdit:\nI guess if you as a kid saw yourself going to the gift shop I guess it\u2019s more time slip or something.",
+        "Seriously OP please try and talk to them some time",
+        "If it weren't for the time lost I'd say you just spaced out on a drive you've done so often that it's automatic. First time that happened to me I really tripped out but I hadn't lost time. But that extra 1 hour 45 minutes thing changes things.",
+        "This is so scary. Did you happen to notice your mileage on your vehicle? Did it stay the same?",
+        "Growing up I watched a documentary about alien abductions and this was one of the common things to all of the people who suffered them, missing time.\n\nThey said they were abducted and memories were \u2018deleted\u2019 after, they only knew what had happened after doing regressions.",
+        "It's AWOL time!\n\u039c\u03b7\u03bd \u03b1\u03bd\u03b7\u03c3\u03c5\u03c7\u03b5\u03af\u03c4\u03b5...\n\n\u0395\u03af\u03c7\u03b1\u03c4\u03b5 \u03b1\u03bd\u03b1\u03af\u03c4\u03b9\u03b1 \u03bc\u03b5\u03c4\u03b1\u03ba\u03af\u03bd\u03b7\u03c3\u03b7 \u03c3\u03b5 \u03b2\u03ae\u03bc\u03b1\u03c4\u03b1 \u03b3\u03b5\u03b3\u03bf\u03bd\u03cc\u03c4\u03bf\u03c2 \u03b3\u03b9 '\u03b1\u03c5\u03c4\u03bf \u03ba\u03b1\u03b9 \u03c4\u03b1 25 \u03c7\u03b9\u03bb\u03b9\u03cc\u03bc\u03b5\u03c4\u03c1\u03b1 \u03c0\u03bf\u03c5 \u03bb\u03b5\u03af\u03c0\u03bf\u03c5\u03bd \u03b1\u03c0\u03bf \u03c4\u03b7\u03bd \u03b4\u03b9\u03b1\u03b4\u03c1\u03bf\u03bc\u03ae \u03b1\u03bb\u03bb\u03ac \u03ba\u03ac\u03bd\u03b1\u03c4\u03b5 \u03ba\u03b1\u03b9 \u03c4\u03b1\u03be\u03af\u03b4\u03b9 \u03c3\u03c4\u03bf \u03c7\u03c1\u03cc\u03bd\u03bf \u03b3\u03b9 '\u03b1\u03c5\u03c4\u03bf \u03ba\u03b1\u03b9 \u03b7 \u03c0\u03b1\u03c1\u03b1\u03c0\u03ac\u03bd\u03c9 \u03ce\u03c1\u03b5\u03c2 \u03c3\u03c4\u03b7\u03bd \u03b4\u03b9\u03b1\u03b4\u03c1\u03bf\u03bc\u03ae.\n\u0394\u03b5\u03bd \u03b3\u03af\u03bd\u03b5\u03c4\u03b1\u03b9 \u03bd\u03b1 \u03b6\u03bf\u03cd\u03bc\u03b5 \u03bc\u03b5 \u03ba\u03c4\u03b7\u03c4\u03b9\u03ba\u03cc\u03c4\u03b7\u03c4\u03b1 \u03b5\u03c0\u03af \u03cc\u03bb\u03c9\u03bd \u03b3\u03cd\u03c1\u03c9 \u03bc\u03b1\u03c2 \u03b3\u03b9\u03b1\u03c4\u03af \u03b4\u03b5\u03bd \u03bc\u03b1\u03c2 \u03b1\u03bd\u03ae\u03ba\u03bf\u03c5\u03bd.\n\u038c\u03bb\u03b1 \u03b6\u03bf\u03cd\u03bd \u03b3\u03b9\u03b1 \u03c4\u03bf\u03bd \u03b5\u03b1\u03c5\u03c4\u03cc \u03c4\u03bf\u03c5\u03c2,\u03bc\u03b1\u03c2 \u03b1\u03c1\u03ad\u03c3\u03b5\u03b9 \u03ae \u03b4\u03b5\u03bd \u03bc\u03b1\u03c2 \u03b1\u03c1\u03ad\u03c3\u03b5\u03b9.\n\u0395\u03c5\u03c7\u03b1\u03c1\u03b9\u03c3\u03c4\u03ce \u03b3\u03b9\u03b1 \u03c4\u03bf \u03c7\u03c1\u03cc\u03bd\u03bf \u03c3\u03b1\u03c2!",
+        "Check your credit card/online banking to see if you made any purchases during the missing time.",
+        "Thats pretty cool and erie  at the same time. I sometimes wonder if we have parallel universes?",
+        "Wow \nThat about explains how things r manifesting these days, in my life, only in a lot shorter time frames! Just really unexplainable \u201ccoincidences\u201d beautiful synchronicities , such random and crazy things, it\u2019s almost like I am controlling EVERYTHING I experience with my thoughts \ud83e\uddd0\ud83e\udd29\ud83d\ude0e",
+        "I guess my first question would be how on Earth did you know it was an 'older you' the first time?  10 years difference in age makes a massive difference in looks when you're a child...",
+        "This is so real, I\u2019ve experienced time slip, times again and again, but not seeing my younger and elder self, this is eerie and exciting at the same time. \ud83d\ude2d",
+        "OP, look into \u201ceternalism\u201d. Super cool theory about all time being equally real (ie happening at the same time). You can also look up block theory. \n\nPersonally, if theoretically all time exists at once, and we only perceive the things that exist in the time we\u2019re \u201ctuned into\u201d, then theoretically I don\u2019t see why it would not be possible to have the veil that divides the two time periods to drop causing you to be able to see the past (or preset) reality overlay onto of what you generally see. \n\nMaybe it happens more often than we think, but usually the differences are so minor we don\u2019t pick up on them (unlike, say, seeing yourself). \n\nsometimes, causing you to see s",
+        "Time slips are often very brief.  The intersection of two different times is very unstable leaving only  seconds usually for the two to interact.  I wonder if one was quick that one could cross to the other time?",
+        "I love this, maybe a higher \u201c5th dimensional being opened a time portal their by accident\u201d or mirror \ud83e\ude9e",
+        "I have not had that happen. I did once have my consciousness jump forward in time, and that consciousness jumped back for about a second. But that's about it. I posted about it here a long time ago."
+      ]
+    },
+    {
+      "interests": [
+        "paranormal phenomena",
+        "time travel theories"
+      ],
+      "personality_traits": [
+        "open-minded",
+        "curious",
+        "slightly skeptical",
+        "empathetic"
+      ],
+      "likely_demographics": "Likely adult (30-55), possibly male or female, interested in science fiction and mystery.  Could be a reader of speculative fiction or someone who follows unexplained phenomena online.",
+      "persona_id": "persona_7",
+      "generated_from_cluster": [
+        "I don\u2019t care if that was a real or imagined experience.   Thanks for sharing. I enjoyed reading it.   \ud83d\ude0e",
+        "This has been happening more and more where people are not only losing time but winding up in locations they don't remember traveling to.  It's the timelines collapsing.  How it works? I don't know but I'm happy you made it to your chosen destination.  Not everyone does."
+      ]
+    },
+    {
+      "interests": [
+        "podcasting",
+        "paranormal stories",
+        "alien abduction stories",
+        "storytelling"
+      ],
+      "personality_traits": [
+        "curious",
+        "skeptical",
+        "sharing",
+        "collaborative"
+      ],
+      "likely_demographics": "Likely a fan of podcasts, particularly those focused on paranormal or supernatural themes.  Potentially a storyteller themselves, possibly with an interest in creating their own podcast.  May reside in a Spanish-speaking region, possibly South America, given the podcast collaboration request.",
+      "persona_id": "persona_8",
+      "generated_from_cluster": [
+        "Awesome story for the Jim Harold's Campfire podcast!",
+        "Can you link your story?",
+        "this is the beginning of every driving alien abduction story ever",
+        "I've seen this story before so yes apparently it happens. Wonder what the point of it is though.",
+        "OP can I tell our story in my podcast? I'm just starting it, is in Spanish and local to Bogot\u00e1, Colombia so no profit is being made currently"
+      ]
+    },
+    {
+      "interests": [
+        "time travel paradoxes",
+        "glitch observation",
+        "temporal anomalies"
+      ],
+      "personality_traits": [
+        "curious",
+        "analytical",
+        "slightly anxious",
+        "open-minded"
+      ],
+      "likely_demographics": "Likely young adult (20s-30s), possibly experiencing a stressful or confusing event related to time or reality.  They are inquisitive and seek to understand unusual phenomena, demonstrating a fascination with the paranormal or metaphysical.",
+      "persona_id": "persona_9",
+      "generated_from_cluster": [
+        "If you can record such glitches, please do it!",
+        "Yes! Please record!",
+        "If a man made the loop 36 times, why didn\u2019t you record any of that, or any other instance?",
+        "But how are you observing these things? Sounds like you're in the same loop \ud83d\udc80",
+        "Um, yeah, please record",
+        "That must have been a very confusing moment for you, so it\u2019s completely understandable that you didn\u2019t have the bandwidth.. or even the idea of how to confront the situation at the time. And now it\u2019s troubling you, but the moment has passed. Just know that it was meant to happen exactly the way it did. You couldn\u2019t have changed it.\n\nMaybe your life is in some kind of loop and this is something that keeps repeating across lifetimes .. or maybe not. Perhaps it was a one-off glitch, something that wasn\u2019t supposed to happen but did anyway. In a strange way, maybe it\u2019s a good thing that you and your younger self didn\u2019t actually meet or touch. That might have really messed things up.\n\nI wanted to ask though.. do you live in the same house now as you did when you were younger? If you\u2019ve moved, maybe your younger self is living in that original place. You could try watching him from afar to see if everything else matches up. I wouldn\u2019t usually advise this, but since this is really affecting you, it might offer some clarity.\n\nJust be careful not to meet him or let him see you. That could create a paradox and you don\u2019t want to risk things spiraling out of control.",
+        "Could it be a loop?"
+      ]
+    },
+    {
+      "interests": [
+        "unexplained phenomena",
+        "hypnotherapy",
+        "ice cream"
+      ],
+      "personality_traits": [
+        "empathetic",
+        "humorous",
+        "slightly paranoid",
+        "open-minded"
+      ],
+      "likely_demographics": "Likely adult, possibly male or female, interested in conspiracy theories and the paranormal.  May have experienced a strange event and is seeking validation and explanation.",
+      "persona_id": "persona_10",
+      "generated_from_cluster": [
+        "I've got no answers for you, but I just want to say I believe you. Something weird happened. Do you have a dash cam? Maybe get one in case something happens again.",
+        "I had a very similar situation occur to me in 2011. \n\nI've considered hypnotherapy but really don't want to know what happened lol.",
+        "Agent log: system crash detected. Power flicker \u2192 forced traffic cone indoctrination. Classic distraction protocol \ud83c\udf00",
+        "Did you find any weird marks on your body from an alien abduction ?  You might want to check\n\nThe greys dropped you off, stopped to channel surf, and giggled as they left you sitting in front of The Traffic Cone Hour with Mort.",
+        "I, too, want me some cone propaganda",
+        "Now I want a cone.\n\nOf ice cream."
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "submission_id": 64,
+      "author": "username",
+      "content": "This is... unsettling.  I'm not dismissing your experience, because false memories are a real thing, but the level of detail you'd need to conjure a whole *game* from scratch, complete with mechanics and aesthetic \u2013 that's... beyond typical.  Have you considered talking to a doctor or therapist?  Memory issues, even seemingly minor ones, can indicate underlying problems.  I'm genuinely concerned, and I hope you'll get some professional help to explore this.  (Also, if you can recall any *specific* details \u2013 even seemingly insignificant ones \u2013  that might help others identify a potential source for this false memory.  Sometimes even small details can be the key.)",
+      "persona_id": "persona_1"
+    },
+    {
+      "submission_id": 64,
+      "author": "ChronosGlitch",
+      "content": "Whoa. That's... unsettling.  This hits a little too close to home, actually.  I've experienced something similar, though not with a specific game. More of a... feeling. Like a persistent, low-level cognitive dissonance surrounding certain aspects of my childhood. Games I *swear* I played, but which leave no trace in any readily accessible memory banks \u2013 photos, old consoles, online forums, nothing.  It's almost like... fragmented memories from a timeline that no longer exists. Or maybe one that's subtly shifted.  Have you considered the possibility of a localized, temporary reality distortion?  The kind that affects only specific memories?  Perhaps the game *did* exist, in a version of reality adjacent to our own, and then...shifted. I'm delving into some research on temporal anomalies and subjective experiences; if you're open to collaborating on this, let me know.  We could compare notes, maybe even find a pattern.",
+      "persona_id": "persona_2"
+    },
+    {
+      "submission_id": 64,
+      "author": "Cipher_1997",
+      "content": "This is... unsettling.  I've had similar experiences with fragmented memories of games that *feel* intensely real, but vanish upon any attempt to recall specifics.  Like trying to grasp smoke.  It\u2019s almost as if they existed in a parallel reality, a glitch in the system of my own mind.  What details do you remember?  Genre?  Graphics style?  Even a single character name, however vague, could help. The more data we have, the better chance we have of... well, maybe not *solving* this, but perhaps understanding the nature of this memory anomaly.  We might even find others who experienced something similar.  (The Mandela Effect, anyone?)",
+      "persona_id": "persona_3"
+    },
+    {
+      "submission_id": 64,
+      "author": "RetrospectiveGamer87",
+      "content": "Whoa, this is seriously unsettling.  I've had similar experiences, though never with a full-blown game.  More like fleeting glimpses of game menus or character designs that feel *incredibly* familiar, yet I can never place them.  It's like a half-remembered dream, but with the sharp clarity of a real memory.  The feeling of that 'missing' game... that cognitive dissonance is really something.  Have you tried any memory recall techniques?  Maybe free association or something?  I'm wondering if this is some kind of glitch in the Matrix, a memory bleed from a parallel reality, or something far more... *paranormal*. (Shudders) Seriously though, let's keep digging;  this could be huge.  I'm keeping a notebook now, documenting any similar 'memories' that pop up.  The details, however faint, could be the key.",
+      "persona_id": "persona_4"
+    },
+    {
+      "submission_id": 64,
+      "author": "Neo_in_LA",
+      "content": "Whoa.  This is\u2026 unsettlingly familiar.  Reminds me of that glitch in the Matrix where you *know* you've seen something, a specific scene, a certain texture, but it never actually existed. Like that time I was chasing a guy through a Chinatown alleyway that *looked* exactly like one in GTA:SA, except the textures were\u2026off.  Hyper-realistic, almost photorealistic, but subtly wrong, like a slight chromatic aberration in reality itself.  It was unnerving.\n\nSo, you woke up with a\u2026 what? A *memory* of a game?  Did it have a specific style?  Was it open-world like GTA, or more linear, like a pre-rendered FMV title?  Was the art style realistic, like L.A. Noire's painstaking detail, or more stylized?  Any specific gameplay mechanics stand out?  Did it feel like something you *should* know, but can\u2019t quite place? Because that\u2019s exactly the feeling I get sometimes with these phantom game memories. Are we being fed false narratives?  Is this some kind of systemic error in the simulation?  I need more data.  Let's break this down, step by step.  What *else* do you remember?",
+      "persona_id": "persona_5"
+    },
+    {
+      "submission_id": 64,
+      "author": "ChronosGlitch_1997",
+      "content": "Whoa. This is... unsettlingly familiar.  I've had similar experiences, though mine are more... fragmented.  Vivid snippets of gameplay, characters I *know* I should remember but can't quite place, soundtracks that haunt my dreams.  It feels like a half-remembered dream, except the feeling of *knowing* it was real is overwhelmingly present.  Almost like a glitch in the timeline, where a game existed, was played, and then...un-existed.  Has anyone considered the possibility of...parallel realities? Or maybe, and this is a stretch, even time displacement? A game from a timeline that never intersected with ours? The sheer impossibility of it is what makes it so compelling.  I've been meticulously researching obscure gaming history, trying to find even a *hint* of these phantom games, but nothing.  It's like they never existed, yet they clearly did, at least in some *way*.  This deserves more investigation.  Much more.",
+      "persona_id": "persona_6"
+    },
+    {
+      "submission_id": 64,
+      "author": "Chrono_Glitch_1987",
+      "content": "Whoa, this is wild.  I've had similar experiences, though not with a full-blown game. More like fleeting glimpses of game mechanics or UI elements that just\u2026aren't real. Like, I'll get a flash of a specific graphical style, a certain type of weapon, or even a snippet of a soundtrack that I *know* I've never heard before.  It's like my brain is briefly accessing a parallel reality's gaming library, or maybe even a potential timeline where that game *did* exist.  Have you considered the possibility of a Mandela Effect related to video games? Or perhaps even a glitch in the spacetime continuum affecting your memories?  Seriously, the sheer volume of unreleased games, abandoned projects, and prototypes suggests that there's a whole hidden world of digital artifacts out there.  We could be inadvertently tapping into it.  This is fascinating!  Anyone else experiencing similar things?  Let's dive into the possibilities!",
+      "persona_id": "persona_7"
+    },
+    {
+      "submission_id": 64,
+      "author": "CrypticCassette",
+      "content": "Whoa, this is wild.  As someone who podcasts about paranormal stuff and delves into forgotten corners of gaming history, this immediately grabs my attention.  The feeling of remembering a game that *never existed* is a classic Mandela Effect-type scenario, but with a distinctly videogame twist.  Have you tried any memory retrieval techniques?  Free association, drawing what you remember of the cover art, even trying to reconstruct the gameplay in your mind?  Sometimes jogging the memory that way can unearth surprising details.  I'd be fascinated to hear more about the specific gameplay, graphics, even the *feeling* of the game.  Was it scary?  Funny?  Action-packed?  The more details you can dredge up, the more we can try to figure out what's going on.  Could it even be a fragment of a dream, cleverly disguised as a memory?  This is definitely podcast fodder.",
+      "persona_id": "persona_8"
+    },
+    {
+      "submission_id": 64,
+      "author": "ChronosGlitch",
+      "content": "This is fascinating.  The feeling of remembering a game that never existed... it screams temporal anomaly to me.  My initial analytical mind points towards a few possibilities:\n\n1. **False Memory:**  A common occurrence, especially with the blurring of memories over time.  Could you provide more detail about the game? Genre, graphics style, key plot points, even a vague title might help us rule this out. The more concrete details, the better we can assess the likelihood of this being a purely neurological event.\n\n2. **Temporal Residue:**  This is where things get interesting. If this is a genuine 'glitch,'  it suggests a bleed-through from a parallel timeline where that game *did* exist.  Think of it like a ghost in the machine, a faint echo of a reality that shouldn't be accessible to us.  The feeling of familiarity could stem from your subconscious picking up on this residue, even if you can't consciously 'remember' playing it.\n\n3. **Precognitive Dream:** Your brain might have processed information that hasn't manifested yet in our reality. This aligns with the idea that we might experience the 'future' before it happens. This possibility makes for a far more bizarre case for a glitch in the reality fabric and is highly interesting to explore.\n\nI'm genuinely curious to hear more.  The details, however vague they may seem, could be the key to unraveling this.  Even the smallest piece of information might reveal whether we're dealing with a simple memory lapse or something far more... *paradoxical*.",
+      "persona_id": "persona_9"
+    },
+    {
+      "submission_id": 64,
+      "author": "UnexplainedHypno",
+      "content": "Wow, this is fascinating!  As someone who dabbles in both unexplained phenomena and hypnotherapy (don't worry, I'm fully licensed!), this really piques my interest.  \n\nFrom the purely 'unexplained' angle, the Mandela Effect is a similar concept \u2013 a shared false memory of something that never happened. Could this be a variant?  Perhaps a glitch in the collective unconscious, or even a psychic residue from a game that *almost* existed, a near-miss in the timeline of gaming history? \ud83e\udd14\n\nOn the hypnotherapy side,  I'd be curious to know if exploring this memory under hypnosis might reveal more. Is it a vivid dream-like memory, or something more... concrete? Details like the graphics style, characters, and even snippets of dialogue could help unlock the mystery.  We might even discover the underlying psychological triggers responsible for creating this memory. \n\n(And on a lighter note,  has anyone else ever woken up convinced they'd mastered a ridiculously difficult guitar solo only to find out they still struggle with 'Hot Cross Buns'? Just me? Okay then. \ud83d\ude05)",
+      "persona_id": "persona_10"
+    }
+  ],
+  "summary": {
+    "total_personas": 10,
+    "total_comments": 10,
+    "success_rate": 100.0
+  }
+}

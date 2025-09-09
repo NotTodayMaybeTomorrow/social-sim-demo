@@ -25,7 +25,7 @@ def generate_comment_with_retry(persona: Dict[str, Any], latest_submission: Dict
     content = latest_submission.get('content', '')[:200] if len(latest_submission.get('content', '')) > 200 else latest_submission.get('content', '')
     
     prompt = (
-        f"Role-play as the persona: {persona['interests'][:2]}, {persona['personality_traits'][:2]}, {persona['likely_demographics'][:6]}\n\n"
+        f"Role-play as the persona: {persona['interests'][:2]}, {persona['personality_traits'][:2]}\n\n"
         f"Write a tailored Reddit comment with distinct writing styles based on the persona for:\n"
         f"Title: {title}\n"
         f"Content: {content}\n\n"
